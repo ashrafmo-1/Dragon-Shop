@@ -6,6 +6,12 @@ import Container from 'react-bootstrap/Container';
 import NavBar from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import dynamic from "next/dynamic"
+
+// navgation bar dinamic call by cleint side
+const DinamicBtn = dynamic(() => import("../loignBtn/loginbtn"), {
+    ssr: false,
+})
 
 const Nav = () => {
     return (
@@ -25,16 +31,7 @@ const Nav = () => {
                         <NavDropdown.Item href="/"> childrens </NavDropdown.Item>
                     </NavDropdown>
                 </NavBar>
-                {
-                    window.localStorage.getItem("email") ?
-                    <div onClick={() => {
-                        window.localStorage.removeItem("email");
-                        window.location.pathname = '/';
-                    }}>
-                        <span className='login'>log out</span>
-                    </div> :
-                    <Link href={'/register'} className='login'>logn \ regiser</Link>
-                }
+                <DinamicBtn />
             </Navbar.Collapse>
         </Container>
         </Navbar>
