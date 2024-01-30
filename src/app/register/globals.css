@@ -1,0 +1,56 @@
+.register-page{
+    height: calc(100vh - 68px);
+
+    .form {
+        .inputInfo{
+            color: #000;
+            font-size: 16px;
+            font-weight: 400;
+            padding-left: 10px;
+            margin-bottom: 9px;
+        }
+        .imput{
+            width: 367px;
+            height: 34px;
+            flex-shrink: 0;
+            border-radius: 50px;
+            border: 1px solid #656ED3;
+            background: rgba(175, 179, 255, 0.00);
+        }
+        .submit{
+            width: 365px;
+            height: 34px;
+            border-radius: 50px;
+            background: #656ED3;
+            color: white;
+            border: none;
+            font-size: 18px;
+        }
+    }
+}
+
+.img {
+    width: 536px;
+    height: 492px;
+    z-index: 1;
+}
+.bgColor{
+    width: 635px;
+    height: 377px;
+    transform: rotate(-90deg);
+    border-radius: 105.53px;
+    background: #AFB3FF;
+    position: absolute;
+    top: 80px;
+    z-index: -1;
+}
+.bgColor2{
+    width: 635px;
+    height: 377px;
+    transform: rotate(-80deg);
+    border-radius: 105.53px;
+    background: #656ED3;
+    position: absolute;
+    top:-140px;
+    z-index: -100;
+}
