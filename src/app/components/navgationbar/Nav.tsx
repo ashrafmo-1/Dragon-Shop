@@ -8,10 +8,19 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
 const Nav = () => {
+
+    let loginBtn = (): void => {
+
+    }
+
+
+
+
+
     return (
         <Navbar expand="lg" className="bg-dark" style={{zIndex: '99999'}}>
         <Container>
-            <Link href="/" className='navbar-brand fw-bold fs-1'>dragon store</Link>
+            <Link href="/" className='navbar-brand fw-bold fs-1'>Dragon_Store</Link>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <NavBar className="me-auto gap-3">
@@ -25,7 +34,11 @@ const Nav = () => {
                         <NavDropdown.Item href="/"> childrens </NavDropdown.Item>
                     </NavDropdown>
                 </NavBar>
-                <Link href={'/register'} className='login'>logn \ regiser</Link>
+                {window.localStorage.getItem("email") ?
+                (<div onClick={(logOut) => { window.localStorage.removeItem("email"); window.location.pathname = '/' }}>
+                        <span className='login'>log out</span>
+                </div>) :
+                <Link href={'/register'} className='login'>logn \ regiser</Link>}
             </Navbar.Collapse>
         </Container>
         </Navbar>

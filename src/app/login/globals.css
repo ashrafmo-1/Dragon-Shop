@@ -1,0 +1,61 @@
+.login-page{
+    height: calc(100vh - 67px);
+
+    overflow: hidden;
+    .form {
+        .inputInfo{
+            color: #000;
+            font-size: 16px;
+            font-weight: 400;
+            padding-left: 10px;
+            margin-bottom: 9px;
+        }
+
+        .imput{
+            width: 367px;
+            height: 34px;
+            flex-shrink: 0;
+            border-radius: 50px;
+            border: 1px solid teal;
+            background: rgba(175, 179, 255, 0.00);
+            padding-inline: 10px;
+            font-size: 19px;
+        }
+        .submit{
+            width: 365px;
+            height: 34px;
+            border-radius: 50px;
+            background: teal;
+            color: white;
+            border: none;
+            font-size: 18px;
+        }
+        .BGCOLOR {
+            width: 553.742px;
+            height: 231.209px;
+            transform: rotate(-41.105deg);
+            border-radius: 105.53px;
+            background: #AFB3FF;
+            position: absolute;
+            top: -10px;
+            right: 30px;
+            z-index: -1;
+        }
+    }
+    .bgColor {
+        width: 365px;
+        position: absolute;
+        height: 100%;
+        background: teal;
+        color: white;
+        border: none;
+        font-size: 18px;
+        top: 0;
+        left: 0;
+    }
+    .img {
+        width: 536px;
+        height: 492px;
+        z-index: 1;
+    }
+}
