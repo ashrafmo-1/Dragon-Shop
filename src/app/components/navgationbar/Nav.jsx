@@ -8,15 +8,6 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
 const Nav = () => {
-
-    let loginBtn = (): void => {
-
-    }
-
-
-
-
-
     return (
         <Navbar expand="lg" className="bg-dark" style={{zIndex: '99999'}}>
         <Container>
@@ -34,11 +25,16 @@ const Nav = () => {
                         <NavDropdown.Item href="/"> childrens </NavDropdown.Item>
                     </NavDropdown>
                 </NavBar>
-                {window.localStorage.getItem("email") ?
-                (<div onClick={(logOut) => { window.localStorage.removeItem("email"); window.location.pathname = '/' }}>
+                {
+                    window.localStorage.getItem("email") ?
+                    <div onClick={() => {
+                        window.localStorage.removeItem("email");
+                        window.location.pathname = '/';
+                    }}>
                         <span className='login'>log out</span>
-                </div>) :
-                <Link href={'/register'} className='login'>logn \ regiser</Link>}
+                    </div> :
+                    <Link href={'/register'} className='login'>logn \ regiser</Link>
+                }
             </Navbar.Collapse>
         </Container>
         </Navbar>
