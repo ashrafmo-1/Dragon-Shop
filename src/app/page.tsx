@@ -4,6 +4,6 @@ import Nav from "./components/navgationbar/Nav";
 
 export default function Home() {
   return (
-  <h1>he</h1>
+    <Nav />
   );
 }
