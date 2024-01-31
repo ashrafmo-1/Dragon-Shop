@@ -14,17 +14,16 @@ const Register = () => {
     const [password, setPassword] = useState("");
     const [confirmpass, setConfirmpass] = useState("");
     const [accept, setAccept] = useState(false);
-
     const [emailError, setemailError] = useState("")
 
     async function Submit(ele) {
         let flag = true;
         ele.preventDefault();
         setAccept(true);
-        name === "" || email === "" || password.length < 12 || confirmpass !== password ? (flag = false) : (flag = true);
+        name === "" || password.length < 4 || confirmpass !== password ? (flag = false) : (flag = true);
 
         try {
-            if(flag) {
+            if (flag) {
                 let response = await fetch("http://127.0.0.1:8000/api/register", {
                     method: "post",
                     headers:{
@@ -60,13 +59,14 @@ const Register = () => {
                         </label>
                         <label className='d-flex flex-column'>
                             <span className='inputInfo' >email:</span>
-                            <input className='imput' type="email" name="" id="" onChange={(ele) => {setEmail(ele.target.value)}} />
-                            {email === "" && emailError && <p className='error'>mail is required.!</p>}
+                            <input className='imput' type="email" name="" id="" required onChange={(ele) => {setEmail(ele.target.value)}} />
+                            {accept === true || emailError === 422 ? (<p className='error'> email is Already been taken.!</p>) : null}
+                            {email === "" ? (<p className='error'>must type your email</p>) : null}
                         </label>
                         <label className='d-flex flex-column'>
                             <span className='inputInfo' >password</span>
                             <input className='imput' type="password" name="" id="" onChange={(ele) => {setPassword(ele.target.value)}} />
-                            {password.length < 12 && accept && <p className='error'>Password must be more than 12 char</p>}
+                            {password.length < 4 && accept && <p className='error'>Password must be more than 12 char</p>}
                         </label>
                         <label className='d-flex flex-column'>
                             <span className='inputInfo' >confirm password:</span>
@@ -75,6 +75,7 @@ const Register = () => {
                         </label>
                         <button className='submit'>Register</button>
                         <div>yes i have an account? <Link href={'/login'}>login</Link></div>
+                        <div>dashboard control <Link href={'/dashboard'}>dashboard</Link></div>
                     </form>
                     <div className="style w-50 d-flex justify-content-center align-content-center">
                         <Image src={styleLeft} width={500} height={520} className='img' alt="style image only" />
