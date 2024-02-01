@@ -1,0 +1,44 @@
+.home {
+    .nav-slide{
+        margin: auto;
+        position: relative;
+        width: 100%;
+        .nav-links {
+            display: flex;
+            .link {
+                position: relative;
+                cursor: pointer;
+            }
+            .link::after {
+                position: absolute;
+                content: '';
+                width: 0;
+                height: 2px;
+                background-color: #fff;
+                bottom: -2px;
+                left: 50%;
+                transform: translateX(-50%);
+                /* transition: .4s; */
+            }
+        }
+        .link:hover.link::after {
+            width: 50%;
+        }
+    }
+    .lading {
+        height: 50vh;
+        background-image:  linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./assets//cb_dHP_20230111_Monterey.webp);
+
+        .title{
+            font-size: 40px;
+            text-transform: uppercase;
+        }
+        .description{
+            color: teal;
+        }
+        .links-btns{
+            background-color: teal;
+            color: white;
+        }
+    }
+}

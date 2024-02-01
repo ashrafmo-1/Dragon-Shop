@@ -1,7 +1,4 @@
 import React from 'react'
-// import Image from 'next/image';
-import home from "../assets/home.png"
-
 const  ProductsManagement = async () => {
     let api= "https://database-products.onrender.com/products"
     const response = await fetch(api ,{
@@ -9,12 +6,9 @@ const  ProductsManagement = async () => {
             revalidate: 120,
         },
     });
-
     const products = await response.json();
-
-    console.log(response);
-    console.log(products);
-
+    // console.log(response);
+    // console.log(products);
 
     const allProducts = products.map((product: any) => {
         return(
