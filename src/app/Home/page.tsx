@@ -1,5 +1,11 @@
 import React from 'react';
 import "./globals.css";
+import Image from 'next/image';
+import lap from './assets/categories/laptop.jpg';
+import camira from './assets/categories/camira.jpg';
+import iphone from './assets/categories/ipone 12.jpg';
+import sama3a from './assets/categories/sma3a.jpg';
+import smarwatch from './assets/categories/xiaomi_redmi_watch.png';
 
 const HomePage = () => {
     return (
@@ -25,14 +31,37 @@ const HomePage = () => {
             </div>
         </div>
         <div className="lading d-flex justify-content-center align-items-center flex-column">
-            <div className="text-title text-center">
-                <h1 className='title text-white'>dragon store' full ecommerce</h1>
-                <p className='description fs-1 mb-5'>“really beautiful & worth the price”</p>
-                <p className='sale d-flex flex-column fs-1 text-white'><span>up to 44% sale: </span>4th of july event</p>
+                <div className="text-title text-center">
+                    <h1 className='title text-white'>dragon store' full ecommerce</h1>
+                    <p className='description fs-1 mb-5'>“really beautiful & worth the price”</p>
+                    <p className='sale d-flex flex-column fs-1 text-white'><span>up to 44% sale: </span>4th of july event</p>
+                </div>
+                <div className='btns d-flex gap-4 align-items-center justify-content-center'>
+                    <button className='links-btns btn fw-bold fs-3'>fashon woman</button>
+                    <button className='links-btns btn fw-bold fs-3'>fashon man</button>
+                </div>
+
+        </div>
+        <div className="categories-boxes mt-5 d-flex justify-content-center align-items-center flex-wrap gap-5 ">
+            <div className="category-box text-center">
+                <Image className='img' src={lap} alt='' width={150} height={110} />
+                <p className='description'>laptops</p>
             </div>
-            <div className='btns d-flex gap-4 align-items-center'>
-                <button className='links-btns btn fw-bold fs-3'>fashon woman</button>
-                <button className='links-btns btn fw-bold fs-3'>fashon man</button>
+            <div className="category-box text-center">
+                <Image className='img'src={camira} alt='' width={150} height={110} />
+                <p className='description'>camira</p>
+            </div>
+            <div className="category-box text-center">
+                <Image className='img'src={iphone} alt='' width={150} height={110} />
+                <p className='description'>iphone</p>
+            </div>
+            <div className="category-box text-center">
+                <Image className='img'src={sama3a} alt='' width={150} height={110} />
+                <p className='description'>oula</p>
+            </div>
+            <div className="category-box text-center">
+                <Image className='img'src={smarwatch} alt='' width={150} height={110} />
+                <p className='description'>smarwatch</p>
             </div>
         </div>
     </div>
@@ -40,15 +69,3 @@ const HomePage = () => {
 }
 
 export default HomePage;
-
-// 
-// 
-// 
-// 
-// Decor & Pillows
-// 
-// Lighting
-// 
-// Gifts
-// SALE
-// Crate&kids

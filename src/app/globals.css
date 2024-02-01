@@ -1,13 +1,17 @@
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0 !important;
+    padding: 0 !important;
     box-sizing: border-box;
 }
+p {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 !important;
+    padding: 0 !important;
+}
 
-/* body {
-    height: 1000vh;
-} */
-
-a {
-
+ul, li {
+    list-style: none !important;
 }
