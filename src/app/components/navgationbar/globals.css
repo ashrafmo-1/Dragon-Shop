@@ -1,6 +1,7 @@
 .navgation-bar {
     .brand-name{
         color: teal;
+        text-transform: uppercase;
     }
     .nav-link{
         text-transform: capitalize;

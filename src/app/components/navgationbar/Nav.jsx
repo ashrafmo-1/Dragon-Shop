@@ -27,7 +27,7 @@ const Nav = () => {
     return (
         <section className={roboto.className}>
         <nav className="navgation-bar bg-dark d-flex align-items-center justify-content-around">
-        <Link href="/" className='brand-name fw-bold fs-1'>Dragon Store</Link>
+        <Link href="/" className='brand-name fw-bold fs-1'>dragon store</Link>
             <ul className="links d-flex align-items-center justify-content-center gap-5">
                 <li> <Link href="/" className='nav-link text-white fs-5 fw-medium'>Home</Link> </li>
                 <li> <Link href="/" className='nav-link text-white fs-5 fw-medium'>about us</Link> </li>
@@ -43,9 +43,11 @@ const Nav = () => {
                         <Link className='categoryLink' href={'/'}>Animal and pets</Link>
                         <Link className='categoryLink' href={'/'}>Machinery tools</Link>
                         <Link className='categoryLink' href={'/'}>More category</Link>
+                        
                     </div>
                 </div>
                 <li> <Link href="/" className='nav-link text-white fs-5 fw-medium'>contact</Link> </li>
+                <li><Link href={'/dashboard'} className='btn btn-outline-danger'> DASHBOARD </Link></li>
             </ul>
             <DinamicBtn />
         </nav>

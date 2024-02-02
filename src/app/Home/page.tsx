@@ -44,24 +44,29 @@ const HomePage = () => {
         </div>
         <div className="categories-boxes mt-5 d-flex justify-content-center align-items-center flex-wrap gap-5 ">
             <div className="category-box text-center">
-                <Image className='img' src={lap} alt='' width={150} height={110} />
-                <p className='description'>laptops</p>
+                <Image className='img mt-3' src={lap} alt='' width={150} height={110} />
+                <p className='description mt-4'>laptops</p>
+                <p className="offer btn btn-outline-success mt-3">offer 44%</p>
             </div>
             <div className="category-box text-center">
-                <Image className='img'src={camira} alt='' width={150} height={110} />
-                <p className='description'>camira</p>
+                <Image className='img mt-3'src={camira} alt='' width={150} height={110} />
+                <p className='description mt-4'>camira</p>
+                <p className="offer btn btn-outline-success mt-3">offer 44%</p>
             </div>
             <div className="category-box text-center">
-                <Image className='img'src={iphone} alt='' width={150} height={110} />
-                <p className='description'>iphone</p>
+                <Image className='img mt-3'src={iphone} alt='' width={150} height={110} />
+                <p className='description mt-4'>iphone</p>
+                <p className="offer btn btn-outline-success mt-3">offer 44%</p>
             </div>
             <div className="category-box text-center">
-                <Image className='img'src={sama3a} alt='' width={150} height={110} />
-                <p className='description'>oula</p>
+                <Image className='img mt-3'src={sama3a} alt='' width={150} height={110} />
+                <p className='description mt-4'>oula</p>
+                <p className="offer btn btn-outline-success mt-3">offer 44%</p>
             </div>
             <div className="category-box text-center">
-                <Image className='img'src={smarwatch} alt='' width={150} height={110} />
-                <p className='description'>smarwatch</p>
+                <Image className='img mt-3'src={smarwatch} alt='' width={150} height={110} />
+                <p className='description mt-4'>smarwatch</p>
+                <p className="offer btn btn-outline-success mt-3">offer 44%</p>
             </div>
         </div>
     </div>
