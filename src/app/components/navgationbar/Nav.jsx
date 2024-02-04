@@ -43,7 +43,6 @@ const Nav = () => {
                         <Link className='categoryLink' href={'/'}>Animal and pets</Link>
                         <Link className='categoryLink' href={'/'}>Machinery tools</Link>
                         <Link className='categoryLink' href={'/'}>More category</Link>
-                        
                     </div>
                 </div>
                 <li> <Link href="/" className='nav-link text-white fs-5 fw-medium'>contact</Link> </li>

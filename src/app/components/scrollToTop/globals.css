@@ -1,0 +1,12 @@
+.btn_style {
+    position: absolute;
+    right: 20px;
+    bottom: 80px;
+}
+.btn {
+    padding: 8px !important;
+    background-color: teal;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold
+};
