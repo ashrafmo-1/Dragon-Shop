@@ -46,7 +46,7 @@ const Nav = () => {
                     </div>
                 </div>
                 <li> <Link href="/" className='nav-link text-white fs-5 fw-medium'>contact</Link> </li>
-                <li><Link href={'/dashboard'} className='btn btn-outline-danger'> DASHBOARD </Link></li>
+                <li><Link href={'/dashboard'} className=''> DASHBOARD </Link></li>
             </ul>
             <DinamicBtn />
         </nav>

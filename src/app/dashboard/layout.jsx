@@ -10,6 +10,7 @@ import Productedit from "./assets/settings_11550010.png"
 import Users from "./assets/team_476863.png"
 import Newuser from "./assets/circle_14025183.png"
 import Admins from "./assets/man_14046875.png"
+import Toggle from "./assets/toggle.png"
 
 export const metadata = {
   title: 'dashboard',
@@ -39,6 +40,7 @@ const layout = ({children}) => {
           </div>
           <div className='dashboard-content'>
             <div className='dashboaed-nav d-flex align-items-center gap-5 px-3 py-2'>
+              <button className='toggle_side_bar'><Image src={Toggle} width={30} height={30} alt='toggle bar' onClick={''} /></button>
               <h2 className='nav-title fs-1'>dashboard</h2>
               <span className='status-nav'>link shortner is live now</span>
             </div>

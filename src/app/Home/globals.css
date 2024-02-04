@@ -1,65 +1,64 @@
-.home {
-    .nav-slide{
-        margin: auto;
-        position: relative;
-        width: 100%;
-        .nav-links {
-            display: flex;
-            .link {
-                position: relative;
-                cursor: pointer;
-            }
-            .link::after {
-                position: absolute;
-                content: '';
-                width: 0;
-                height: 2px;
-                background-color: #fff;
-                bottom: -2px;
-                left: 50%;
-                transform: translateX(-50%);
-                /* transition: .4s; */
-            }
+.nav-slide{
+    margin: auto;
+    position: relative;
+    width: 100%;
+    .nav-links {
+        display: flex;
+        .link {
+            position: relative;
+            cursor: pointer;
         }
-        .link:hover.link::after {
-            width: 50%;
+        .link::after {
+            position: absolute;
+            content: '';
+            width: 0;
+            height: 2px;
+            background-color: #fff;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            /* transition: .4s; */
         }
     }
-    .lading {
-        height: 50vh;
-        background-image:  linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./assets//cb_dHP_20230111_Monterey.webp);
-        background-position: center;
-        background-size: cover;
-
-
-        .title{
-            font-size: 40px;
-            text-transform: uppercase;
-        }
-        .description{
-            color: teal;
-        }
-        .links-btns{
-            background-color: teal;
-            color: white;
-        }
+    .link:hover.link::after {
+        width: 50%;
     }
+}
+.lading-home {
+    height: 50vh;
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./assets/bg.webp);
+    background-position: center;
+    background-size: cover;
 
-    .category-box{
-        width: 180px;
-        height: 220px;
-        background-color: #ffffff;
-        border: 1px solid #777;
-        border-radius: 4px;
-        -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-        -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-
-        .description{
-            font-size: 18px;
-            text-transform: capitalize;
-            color: teal;
-            margin-top: 15px;
-        }
+    .title{
+        font-size: 40px;
+        text-transform: uppercase;
     }
+    .description{
+        color: teal;
+    }
+    .links-btns{
+        background-color: teal;
+        color: white;
+    }
+}
+
+.category-box{
+    width: 180px;
+    height: 220px;
+    background-color: #ffffff;
+    border: 1px solid #777;
+    border-radius: 4px;
+    box-shadow: none;
+    transition: .6s;
+
+    .description{
+        font-size: 18px;
+        text-transform: capitalize;
+        color: teal;
+        margin-top: 15px;
+    }
+}
+.category-box:hover {
+    box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
 }

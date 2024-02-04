@@ -1,26 +1,25 @@
-"use client"
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
-const  ProductsManagement = () => {
-    const [products, setproduct] = useState([])
-    let api= "https://database-products.onrender.com/products";
-    const getData = () => {
-        fetch(api ,{
-        }).then((res) => res.json()).then((data) => setproduct(data));
-    }
+const  ProductsManagement = async () => {
+    // const [products, setproduct] = useState([])
+    let api = "https://database-products.onrender.com/products";
+    const response = await fetch(api ,{
+        next: {
+            revalidate: 120,
+        }
+    })
 
-    useEffect(() => {
-        getData()
-    }, [])
+    let products = await response.json()
 
-    // remove product.
-    let removeProduct = (product) => {
-        fetch(`https://database-products.onrender.com/products${product.id}`, {
-            method: 'delete',
-        })
-        .then((response) => response.json())
-        .then(() => getData())
-    }
+
+    // // remove product.
+    // let removeProduct = (product) => {
+    //     fetch(`https://database-products.onrender.com/products${product.id}`, {
+    //         method: 'delete',
+    //     })
+    //     .then((response) => response.json())
+    //     .then(() => getData())
+    // }
 
     const allProducts = products.map((product, index) => {
         return(
@@ -33,7 +32,7 @@ const  ProductsManagement = () => {
                 <td>{product.rating?.rate}</td>
                 <td>{product.rating?.count}</td>
                 <td className='d-flex justify-content-center align-items-center gap-2'>
-                    <button className='btn btn-outline-danger fs-4 py-1 px-3' onClick={() => {removeProduct(product)}}>Delete</button>
+                    <button className='btn btn-outline-danger fs-4 py-1 px-3' >Delete</button>
                     <button className='btn btn-outline-success fs-4 py-1 px-3'>Edit</button>
                 </td>
             </tr>

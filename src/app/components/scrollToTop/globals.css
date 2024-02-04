@@ -1,12 +1,14 @@
 .btn_style {
-    position: absolute;
+    position: fixed;
     right: 20px;
     bottom: 80px;
 }
-.btn {
+.btn_top {
     padding: 8px !important;
     background-color: teal;
     color: #ffffff;
     font-size: 20px;
-    font-weight: bold
+    font-weight: bold;
+    border: 1px solid #000;
+    border-radius: 8px
 };

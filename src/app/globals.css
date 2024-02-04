@@ -34,3 +34,18 @@ body{
 ::-webkit-scrollbar-thumb {
     background:teal;
 }
+
+/* start feed_back section */
+
+.feed_back {
+    background-color: teal;
+    width: fit-content;
+    margin: auto;
+    padding: 6px !important;
+    transform: rotate(-90deg);
+    position: fixed;
+    right: -40px;
+    top: 250px;
+    color: white;
+}
+/* end feed_back section */

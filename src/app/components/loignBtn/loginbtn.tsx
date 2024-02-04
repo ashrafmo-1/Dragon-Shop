@@ -11,7 +11,7 @@ const Loginbtn = () => {
             }}>
                 <span className='login'>log out</span>
             </div> :
-            <Link href={'/register'} className='login'>logn \ regiser</Link>
+            <Link href={'/register'} className='login py-1 px-3'>logn \ regiser</Link>
         }</div>
     )
 }
