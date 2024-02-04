@@ -1,0 +1,28 @@
+.main_title {
+    color: teal;
+    border-bottom: 4px solid tomato;
+    width: 30%;
+    margin: 10px auto !important;
+    position: relative;
+    .title {
+        text-transform: uppercase;
+        padding: 8px !important;
+    }
+}
+.main_title::after {
+    content: '';
+    position: absolute;
+    background-color: tomato;
+    width: 100%;
+    /* height: 100%; */
+    z-index: -1;
+    transition: .6s;
+}
+.main_title:hover.main_title::after {
+    width: 80%;
+    height: 100%;
+}
+
+.main_title:hover .title {
+    color: white;
+}
