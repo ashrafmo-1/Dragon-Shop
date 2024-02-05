@@ -40,10 +40,10 @@
     z-index: 999;
     background-color: rgba(4, 123, 123, 0.768);
     box-shadow: 2px 0px 6px 0px rgba(0,0,0,0.75);
-    position: absolute;
+    /* position: absolute;
     width: 20%;
-    height: 100vh;
-    left: -200px;
+    height: 100vh; */
+    /* left: -200px; */
 
     .title {
         text-transform: capitalize;

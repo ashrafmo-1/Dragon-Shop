@@ -9,7 +9,7 @@ const  ProductsManagement = async () => {
         }
     })
 
-    let products = await response.json()
+    let products = await response.json();
 
 
     // // remove product.
@@ -38,9 +38,6 @@ const  ProductsManagement = async () => {
             </tr>
         )
     })
-
-
-
 
     return (
         <div>

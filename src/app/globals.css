@@ -11,20 +11,13 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 !important;
     padding: 0 !important;
 }
-
 ul, li {
     list-style: none !important;
 }
-
 input {
     border: none !important;
     outline: none !important;
 }
-
-body{
-    height: 300vh !important;
-}
-
 ::-webkit-scrollbar {
     width: 6px;
 }
@@ -34,9 +27,7 @@ body{
 ::-webkit-scrollbar-thumb {
     background:teal;
 }
-
 /* start feed_back section */
-
 .feed_back {
     background-color: teal;
     width: fit-content;
