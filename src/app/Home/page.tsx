@@ -45,7 +45,7 @@ const HomePage = () => {
 
         <section>
             <MainTitle title='categories' />
-        <div className="categories-boxes mt-5 d-flex justify-content-center align-items-center flex-wrap gap-5 ">
+        <div className="categories-boxes mb-5 mt-5 d-flex justify-content-center align-items-center flex-wrap gap-5 ">
             <div className="category-box text-center">
                 <Image className='img mt-3' src={lap} alt='' width={150} height={110} />
                 <p className='description mt-4'>laptops</p>

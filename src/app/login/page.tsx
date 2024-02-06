@@ -1,13 +1,12 @@
 "use client"
-import React, {useState} from 'react'
-import './globals.css'
-import Image from 'next/image'
-import { Container } from 'react-bootstrap'
-import Link from 'next/link'
-import LoginImage from './Other 03.png'
+import React, {useState} from 'react';
+import './globals.css';
+import Image from 'next/image';
+import { Container } from 'react-bootstrap';
+import Link from 'next/link';
+import LoginImage from './Other 03.png';
 
 const page = () => {
-
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [accept, setAccept] = useState(false);

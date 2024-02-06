@@ -8,18 +8,7 @@ const  ProductsManagement = async () => {
             revalidate: 120,
         }
     })
-
     let products = await response.json();
-
-
-    // // remove product.
-    // let removeProduct = (product) => {
-    //     fetch(`https://database-products.onrender.com/products${product.id}`, {
-    //         method: 'delete',
-    //     })
-    //     .then((response) => response.json())
-    //     .then(() => getData())
-    // }
 
     const allProducts = products.map((product, index) => {
         return(
