@@ -33,14 +33,14 @@ const layout = ({children}) => {
                 <Link className='px-2 link text-decoration-none fs-3 py-2 fw-medium' href={'/dashboard/productmanagement'}> <Image src={Productmanagement} width={15} height={15} alt='img' /> products management</Link>
                 <Link className='px-2 link text-decoration-none fs-3 py-2 fw-medium' href={'/dashboard/addnewproduct'}> <Image src={Newproduct} width={15} height={15} alt='img' /> add new product</Link>
                 <Link className='px-2 link text-decoration-none fs-3 py-2 fw-medium' href={'/'}> <Image src={Productedit} width={15} height={15} alt='img' /> product edit</Link>
-                <Link className='px-2 link text-decoration-none fs-3 py-2 fw-medium' href={'/'}> <Image src={Users} width={15} height={15} alt='img' /> users management</Link>
+                <Link className='px-2 link text-decoration-none fs-3 py-2 fw-medium' href={'/dashboard/showusers'}> <Image src={Users} width={15} height={15} alt='img' /> users management</Link>
                 <Link className='px-2 link text-decoration-none fs-3 py-2 fw-medium' href={'/'}> <Image src={Newuser} width={15} height={15} alt='img' /> add new user</Link>
                 <Link className='px-2 link text-decoration-none fs-3 py-2 fw-medium' href={'/'}> <Image src={Admins} width={15} height={15} alt='img' /> admins</Link>
             </div>
           </div>
           <div className='dashboard-content'>
             <div className='dashboaed-nav d-flex align-items-center gap-5 px-3 py-2'>
-              <button className='toggle_side_bar'><Image src={Toggle} width={30} height={30} alt='toggle bar' onClick={''} /></button>
+              <button className='toggle_side_bar'><Image src={Toggle} width={30} height={30} alt='toggle bar' /></button>
               <h2 className='nav-title fs-1'>dashboard</h2>
               <span className='status-nav'>link shortner is live now</span>
             </div>

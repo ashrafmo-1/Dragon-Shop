@@ -1,7 +1,6 @@
 import React from 'react'
 
 const  ProductsManagement = async () => {
-    // const [products, setproduct] = useState([])
     let api = "https://database-products.onrender.com/products";
     const response = await fetch(api ,{
         next: {
