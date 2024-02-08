@@ -1,0 +1,22 @@
+.Create_New_User{
+    height: calc(100vh - 49px);
+
+    .create_user_title{
+        text-transform: capitalize;
+        font-size: 33px;
+    }
+    .form{
+        background-color: rgba(0, 209, 209, 0.534);
+        width: 500px;
+        height: 600px;
+        border-radius: 8px;
+        .input{
+            background-color: #e5ffff;
+            width: 400px;
+            height: 36px;
+            border-radius: 4px;
+            font-size: 24px;
+            padding-inline: 4px !important;
+        }
+    }
+}
