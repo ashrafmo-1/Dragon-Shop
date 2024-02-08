@@ -7,6 +7,7 @@ import iphone from './assets/categories/ipone 12.jpg';
 import sama3a from './assets/categories/sma3a.jpg';
 import smarwatch from './assets/categories/xiaomi_redmi_watch.png';
 import MainTitle from '../components/mainTitle/MainTitle';
+import Feed_back from '../feedback/page';
 
 const HomePage = () => {
     return (
@@ -42,8 +43,8 @@ const HomePage = () => {
                     <button className='links-btns btn fw-bold fs-3 py-2 px-4'>fashon man</button>
                 </div>
         </div>
-
-        <section>
+        
+        <section className='categories'>
             <MainTitle title='categories' />
         <div className="categories-boxes mb-5 mt-5 d-flex justify-content-center align-items-center flex-wrap gap-5 ">
             <div className="category-box text-center">
@@ -74,8 +75,8 @@ const HomePage = () => {
         </div>
         </section>
 
-        <section>
-            
+        <section className='Feed_back'>
+            <Feed_back />
         </section>
     </div>
     )

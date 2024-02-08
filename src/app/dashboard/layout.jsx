@@ -34,7 +34,7 @@ const layout = ({children}) => {
                 <Link className='px-2 link text-decoration-none fs-3 py-2 fw-medium' href={'/dashboard/addnewproduct'}> <Image src={Newproduct} width={15} height={15} alt='img' /> add new product</Link>
                 <Link className='px-2 link text-decoration-none fs-3 py-2 fw-medium' href={'/'}> <Image src={Productedit} width={15} height={15} alt='img' /> product edit</Link>
                 <Link className='px-2 link text-decoration-none fs-3 py-2 fw-medium' href={'/dashboard/showusers'}> <Image src={Users} width={15} height={15} alt='img' /> users management</Link>
-                <Link className='px-2 link text-decoration-none fs-3 py-2 fw-medium' href={'/'}> <Image src={Newuser} width={15} height={15} alt='img' /> add new user</Link>
+                <Link className='px-2 link text-decoration-none fs-3 py-2 fw-medium' href={'/dashboard/creatuser'}> <Image src={Newuser} width={15} height={15} alt='img' /> add new user</Link>
                 <Link className='px-2 link text-decoration-none fs-3 py-2 fw-medium' href={'/'}> <Image src={Admins} width={15} height={15} alt='img' /> admins</Link>
             </div>
           </div>

@@ -1,13 +1,13 @@
 .login-page{
     height: calc(100vh - 67px);
-
     overflow: hidden;
+
     .form {
         .inputInfo{
             color: #000;
             font-size: 16px;
             font-weight: 400;
-            padding-left: 10px;
+            padding-left: 10px !important;
             margin-bottom: 9px;
         }
 
@@ -16,9 +16,9 @@
             height: 34px;
             flex-shrink: 0;
             border-radius: 50px;
-            border: 1px solid teal;
+            border: 1px solid teal !important;
             background: rgba(175, 179, 255, 0.00);
-            padding-inline: 10px;
+            padding-inline: 10px !important;
             font-size: 19px;
         }
         .submit{
