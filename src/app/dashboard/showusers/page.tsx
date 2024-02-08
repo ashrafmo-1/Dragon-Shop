@@ -1,12 +1,13 @@
 import React from 'react';
 import "./globals.css";
+import Remove from '../remove/remove';
 
-const page = async () => {
+const Users = async () => {
 
     let api = "http://127.0.0.1:8000/api/user/show";
     let response = await fetch(api, {
         next: {
-            revalidate: 40,
+            revalidate: 10,
         }
     })
     let users = await response.json();
@@ -18,7 +19,7 @@ const page = async () => {
                 <td> {user.name} </td>
                 <td> {user.email} </td>
                 <td className='d-flex justify-content-center gap-3'>
-                    <button className='btn btn-outline-danger fs-5 py-1 px-2' >Delete</button>
+                    <Remove id={user.id} />
                     <button className='btn btn-outline-success fs-5 py-1 px-2'>Edit</button>
                 </td>
             </tr>
@@ -43,4 +44,4 @@ const page = async () => {
     )
 }
 
-export default page;
+export default Users;
