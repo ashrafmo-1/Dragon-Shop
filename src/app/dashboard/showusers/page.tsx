@@ -19,7 +19,6 @@ const Users = async () => {
                 <td> {user.name} </td>
                 <td> {user.email} </td>
                 <td className='d-flex justify-content-center gap-3'>
-                    <Remove id={user.id} />
                     <button className='btn btn-outline-success fs-5 py-1 px-2'>Edit</button>
                 </td>
             </tr>
