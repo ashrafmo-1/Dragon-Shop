@@ -23,7 +23,7 @@ const Users = async () => {
                     </thead>
                     <tbody className="table-group-divider"> 
                     {
-                        users.map((user: any) => {
+                        users.map((user) => {
                             return (
                                 <tr className='text-center'>
                                     <td> {user.id} </td>
