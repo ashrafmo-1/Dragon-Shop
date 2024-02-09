@@ -8,6 +8,7 @@ import sama3a from './assets/categories/sma3a.jpg';
 import smarwatch from './assets/categories/xiaomi_redmi_watch.png';
 import MainTitle from '../components/mainTitle/MainTitle';
 import Feed_back from '../feedback/page';
+import Footer from '../components/footer/Footer';
 
 const HomePage = () => {
     return (
@@ -78,6 +79,7 @@ const HomePage = () => {
         <section className='Feed_back'>
             <Feed_back />
         </section>
+        <Footer />
     </div>
     )
 }

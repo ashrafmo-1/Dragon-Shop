@@ -1,0 +1,77 @@
+.footer {
+    width: 80%;
+    margin: auto !important;
+
+    .text_content{
+        .btns {
+            .btn_footer {
+                border: 1px solid #000000;
+                padding: 4px 30px !important;
+                font-size: 22px;
+                color: #000000;
+                font-weight: bold;
+                text-transform: capitalize;
+            }
+            .btn_footer.active {
+                background-color: #000000;
+                color: white;
+            }
+        }
+    }
+    .logo .footer_title {
+        text-transform: uppercase;
+        font-weight: bold;
+        color: teal;
+        font-size: 38px;
+    }
+
+    .links_section {
+        gap: 65px;
+        .title {
+            color: #777;
+            font-size: 16px;
+            text-transform: capitalize;
+            margin-bottom: 10px !important;
+        }
+        .link {
+            text-transform: capitalize;
+        }
+    }
+    .inputSearch {
+        background-color: #999999;
+        border-radius: 4px;
+        height: 50px;
+        margin-bottom: 50px !important;
+
+        .search {
+            width: 500px;
+            height: 38px;
+            border-radius: 4px;
+            font-size: 22px;
+            color: teal;
+            padding-inline: 4px !important;
+        }
+        .lable {
+            position: relative;
+        }
+        .submet {
+            position: absolute;
+            right: 0;
+            height: 100%;
+            border: 1px solid #eee;
+            width: 80px;
+            background-color: #000;
+            color: #eee;
+            font-size: 16px;
+            font-weight: bold;
+        }
+    }
+    .end_footer {
+        margin-top: 50px !important;
+        .brand_footer {
+            text-transform: uppercase;
+            color: teal;
+            font-weight: bolder;
+        }
+    }
+}
