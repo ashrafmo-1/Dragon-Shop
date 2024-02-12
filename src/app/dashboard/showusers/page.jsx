@@ -3,7 +3,11 @@ import "./globals.css";
 
 const Users = async () => {
     let api = "http://127.0.0.1:8000/api/user/show";
-    let response = await fetch(api);
+    let response = await fetch(api, {
+        next: {
+            revalidate: 60,
+        }
+    });
     let users = await response.json();
     let allUsers = users.map((user) => {
         return (
