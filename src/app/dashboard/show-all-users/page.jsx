@@ -1,7 +1,7 @@
 import React from 'react';
 import "./globals.css";
 
-const Users = async () => {
+const Show_all_users = async () => {
     let api = "http://127.0.0.1:8000/api/user/show";
     const response = await fetch(api, {
         next: {
@@ -41,4 +41,4 @@ const Users = async () => {
     )
 }
 
-export default Users;
+export default Show_all_users;
