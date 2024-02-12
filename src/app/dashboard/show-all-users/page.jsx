@@ -1,14 +1,21 @@
-import React from 'react';
+"use client"
+import React, {useState, useEffect} from 'react';
 import "./globals.css";
 
-const Show_all_users = async () => {
+const Show_all_users = () => {
+    const [users, setusers] = useState([])
     let api = "http://127.0.0.1:8000/api/user/show";
-    const response = await fetch(api, {
-        next: {
-            revalidate: 60,
-        }
-    });
-    let users = await response.json();
+
+    useEffect(() => {
+        fetch(api).then((response) => response.json()).then((data) => setusers(data))
+    }, [])
+
+    // const response = await fetch(api, {
+    //     next: {
+    //         revalidate: 60,
+    //     }
+    // });
+    // let users = await response.json();
     return (
         <div className="user_management">
             <h1 className='my-4 text-center' style={{textTransform: 'uppercase', color: 'teal'}}>users management 👨‍💻👩‍💻</h1>
