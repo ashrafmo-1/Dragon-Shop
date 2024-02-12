@@ -9,7 +9,6 @@ const Show_all_users = async () => {
         }
     });
     let users = await response.json();
-    let allUsers = 
     return (
         <div className="user_management">
             <h1 className='my-4 text-center' style={{textTransform: 'uppercase', color: 'teal'}}>users management 👨‍💻👩‍💻</h1>
@@ -23,7 +22,7 @@ const Show_all_users = async () => {
                         </tr>
                     </thead>
                     <tbody className="table-group-divider"> 
-                        {users.map((user, index) => {
+                        {   users.map((user, index) => {
                             return (
                                 <tr className='text-center' key={index}>
                                     <td> {user.id} </td>
