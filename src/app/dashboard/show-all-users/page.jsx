@@ -9,18 +9,7 @@ const Show_all_users = async () => {
         }
     });
     let users = await response.json();
-    let allUsers = users.map((user, index) => {
-        return (
-            <tr className='text-center' key={index}>
-                <td> {user.id} </td>
-                <td> {user.name} </td>
-                <td> {user.email} </td>
-                <td className='d-flex justify-content-center gap-3'>
-                    <button className='btn btn-outline-success fs-5 py-1 px-2'>Edit</button>
-                </td>
-            </tr>
-        )
-    })
+    let allUsers = 
     return (
         <div className="user_management">
             <h1 className='my-4 text-center' style={{textTransform: 'uppercase', color: 'teal'}}>users management 👨‍💻👩‍💻</h1>
@@ -34,7 +23,19 @@ const Show_all_users = async () => {
                         </tr>
                     </thead>
                     <tbody className="table-group-divider"> 
-                        {allUsers}
+                        {users.map((user, index) => {
+                            return (
+                                <tr className='text-center' key={index}>
+                                    <td> {user.id} </td>
+                                    <td> {user.name} </td>
+                                    <td> {user.email} </td>
+                                    <td className='d-flex justify-content-center gap-3'>
+                                        <button className='btn btn-outline-success fs-5 py-1 px-2'>Edit</button>
+                                    </td>
+                                </tr>
+                            )
+                            })
+                        }
                     </tbody>
                 </table>
         </div>
