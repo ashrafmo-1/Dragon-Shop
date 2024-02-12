@@ -9,6 +9,7 @@ import smarwatch from './assets/categories/xiaomi_redmi_watch.png';
 import MainTitle from '../components/mainTitle/MainTitle';
 import Feed_back from '../feedback/page';
 import Footer from '../components/footer/Footer';
+import Boxes_products from "../fetchproduct/boxes_products"
 
 const HomePage = () => {
     return (
@@ -76,10 +77,16 @@ const HomePage = () => {
         </div>
         </section>
 
+        <section>
+            <Boxes_products />
+        </section>
+
         <section className='Feed_back'>
             <Feed_back />
         </section>
-        <Footer />
+        <section className='Footer'>
+            <Footer />
+        </section>
     </div>
     )
 }
