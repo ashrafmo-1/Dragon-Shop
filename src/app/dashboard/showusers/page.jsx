@@ -3,20 +3,19 @@ import "./globals.css";
 
 const Users = async () => {
     let api = "http://127.0.0.1:8000/api/user/show";
-    let response = await fetch(api, {
+    const response = await fetch(api, {
         next: {
             revalidate: 60,
         }
     });
     let users = await response.json();
-    let allUsers = users.map((user) => {
+    let allUsers = users.map((user, index) => {
         return (
-            <tr className='text-center'>
+            <tr className='text-center' key={index}>
                 <td> {user.id} </td>
                 <td> {user.name} </td>
                 <td> {user.email} </td>
                 <td className='d-flex justify-content-center gap-3'>
-                    
                     <button className='btn btn-outline-success fs-5 py-1 px-2'>Edit</button>
                 </td>
             </tr>
@@ -34,7 +33,9 @@ const Users = async () => {
                         <th scope="col" className='py-2 fs-4' style={{textTransform: 'capitalize'}}>action</th>
                         </tr>
                     </thead>
-                    <tbody className="table-group-divider"> {allUsers} </tbody>
+                    <tbody className="table-group-divider"> 
+                        {allUsers}
+                    </tbody>
                 </table>
         </div>
     )
