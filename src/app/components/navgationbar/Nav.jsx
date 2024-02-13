@@ -1,6 +1,6 @@
 "use client"
+import "./globals.scss"
 import React, {useState} from 'react';
-import './globals.css';
 import Link from 'next/link';
 import dynamic from "next/dynamic";
 import Image from 'next/image';

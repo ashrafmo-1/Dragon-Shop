@@ -1,20 +1,22 @@
+@use "../../layout/globlas" as *;
+
 .navgation-bar {
     .brand-name{
-        color: teal;
+        color: $main-color;
         text-transform: uppercase;
     }
     .nav-link{
         text-transform: capitalize;
     }
     .login{
-        color: #ffffff;
+        color: $white-text;
         text-transform: capitalize;
         display: flex;
         justify-content: center;
         align-items: center;
         text-decoration: none;
-        border: 1px solid teal;
-        background-color: teal;
+        border: 1px solid $main-color;
+        background-color: $main-color;
         border-radius: 2px;
         font-size: 16px;
         padding: 2px 4px;
@@ -29,7 +31,7 @@
         position: absolute;
         top: 30px;
         left: 0%;
-        background-color: rgb(255, 255, 255);
+        background-color: $white-text;
         padding: 4px 8px;
         width: 400px;
         font-size: 20px;
@@ -38,7 +40,7 @@
 
         .categoryLink{
             text-decoration: none;
-            color: #000000;
+            color: $black-text;
             background-color: #00000030;
             border-radius: 8px;
             padding: 0px 4px;
