@@ -1,6 +1,6 @@
 "use client"
 import React, {useState, useEffect} from 'react'
-import './globals.css'
+import './globals.scss'
 
 const Scroll = () => {
 

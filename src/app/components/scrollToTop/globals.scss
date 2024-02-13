@@ -1,0 +1,16 @@
+@use "../../layout/variables" as *;
+
+.btn_style {
+    position: fixed;
+    right: 20px;
+    bottom: 80px;
+    > .btn_top {
+        padding: 8px !important;
+        background-color: $main-color;
+        color: $white-text;
+        font-size: 20px;
+        font-weight: bold;
+        border: $border-black-color;
+        border-radius: 8px;
+    };
+}

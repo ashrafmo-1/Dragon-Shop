@@ -1,0 +1,20 @@
+/// flex centering elements
+@mixin flex-center {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+/// grid centering elements
+@mixin grid-center {
+    display: grid !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+
+/// directions
+/// direction column
+@mixin direction-column {
+    display: flex !important;
+    flex-direction: column !important;
+}

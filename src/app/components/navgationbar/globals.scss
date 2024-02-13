@@ -1,21 +1,25 @@
-@use "../../layout/globlas" as *;
+@use "../../layout/variables" as *;
+@use "../../layout/mixin/mixins" as *;
 
 .navgation-bar {
+    position: relative;
+    height: 40px !important;
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
     .brand-name{
         color: $main-color;
-        text-transform: uppercase;
+        text-transform: $text-uppercase;
     }
     .nav-link{
-        text-transform: capitalize;
+        text-transform: $text-capitalize;
     }
     .login{
         color: $white-text;
-        text-transform: capitalize;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        text-transform: $text-capitalize;
+        @include flex-center;
         text-decoration: none;
-        border: 1px solid $main-color;
+        border: $border-main-color;
         background-color: $main-color;
         border-radius: 2px;
         font-size: 16px;
@@ -37,18 +41,50 @@
         font-size: 20px;
         padding-top: 20px;
         border-radius: 4px;
-
         .categoryLink{
             text-decoration: none;
             color: $black-text;
             background-color: #00000030;
             border-radius: 8px;
-            padding: 0px 4px;
+            padding: 0px 4px !important;
         }
     }
     .allCategoris#active #category {
-        display: flex;
-        flex-direction: column;
+        @include direction-column;
         gap: 8px;
+        z-index: 99;
+        padding: 10px !important;
+    }
+}
+
+/// start media query to navigate bar
+/// 
+/// 
+
+@media(min-width: 849px) {
+    .btn-toggle-nav{
+        display: none;
+    }
+}
+
+@media(max-width: 850px) {
+    .navgation-bar {
+        z-index: 99;
+    }
+    .navgation-bar .links {
+        @include direction-column;
+        position: absolute;
+        background-color: $main-color;
+        z-index: 99;
+        width: 80%;
+        height: 350px;
+        top: -360px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -9;
+        transition: .7s;
+    }
+    .navgation-bar .links#active {
+        top: 40px;
     }
 }

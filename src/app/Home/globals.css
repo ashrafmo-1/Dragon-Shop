@@ -1,7 +1,7 @@
 .nav-slide{
     margin: auto;
     position: relative;
-    width: 100%;
+    overflow-x: scroll;
     .nav-links {
         display: flex;
         .link {
