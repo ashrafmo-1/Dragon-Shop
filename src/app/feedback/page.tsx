@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image';
 import Feedback from "./assets/feedback_art.jpg";
+import "./globals.scss";
 const Feed_back = () => {
   return (
     <div id='' className='feed_back_section d-flex justify-content-center align-items-center mb-5 mt-5 pt-5 pb-5 gap-5 w-100'>

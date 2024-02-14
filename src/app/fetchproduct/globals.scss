@@ -1,0 +1,48 @@
+@use "../layout/mixin/mixins" as *;
+@use "../layout/variables" as *;
+
+.get_products{
+    padding: 30px 0 !important;
+    .products-section-title{
+        .title{
+            color: $main-color;
+            font-size: 30px;
+            font-weight: bold;
+            text-transform: $text-uppercase;
+        }
+    }
+    .products_boxes {
+        @include width-center(80%);
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 40px;
+
+        .product_box{
+            background-color: $white-text;
+            box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.75);
+            height: 250px;
+            border-radius: 4px;
+            padding: 6px !important;
+            transition: .5s;
+            &:hover {
+                box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.50);
+            }
+
+            > .image-control-product{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                 .img-control {
+                    cursor: pointer;
+                }
+            }
+
+            .product-title {
+                color: $main-color;
+            }
+            .product-description{
+                color: #777777;
+            }
+        }
+    }
+}

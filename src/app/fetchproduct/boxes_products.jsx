@@ -1,31 +1,43 @@
 import React from 'react';
-import style from "./page.module.css"
+import "./globals.scss"
+import Image from "next/image"
+import cart from "./assets/cart.png"
+import showProduct from "./assets/eye.png"
 
 const Boxes_products = async () => {
 
-    const api = "https://database-products.onrender.com/products";
-    const response = await fetch(api);
-    const products = await response.json();
+  const api = "https://database-products.onrender.com/products";
+  const response = await fetch(api);
+  const products = await response.json();
 
-    const products_boxes = products.map((product) => {
-        return(
-            <div className='product_box'>
-                <img src={product.image} width={50} height={50} />
-                <div className='content_box'>
-                    <div className='info'>
-                        <h3> {product.title} </h3>
-                        <p className='description'>product title and product description component div defrent</p>
-                    </div>
-                    <p className='rate'>rate</p>
-                </div>
-                <div className='add_to_cart'>car</div>
-            </div>
-        )
-    })
+  const products_boxes = products.map((product) => {
+    return (
+      <div className='product_box'>
+        <p className='product-description mb-4'> {product.category} </p>
+        <div className='image-control-product'>
+          <img src={product.image} width={75} height={75} />
+          <div className='controls d-flex align-items-center gap-2 flex-column'>
+            <Image className='img-control' src={cart} width={30} height={30} alt='' />
+            <Image className='img-control' src={showProduct} width={22} height={22} alt='' />
+          </div>
+        </div>
+        {/* {product.title.length > 10 ? `${product.title.slice(0, 22)}..` : product.title} */}
+        <div className='content_box'>
+          <div className='info'>
+            <h3 className='product-title mt-4'> {product.title.length > 12 ? `${product.title.slice(0, 22)}..` : product.title}  </h3>
+          </div>
+          <p className='rate'> {product.rating.rate} </p>
+        </div>
+      </div>
+    )
+  })
 
     return (
-        <div className='get_products bg-body-secondary' id={style.get_products} >
-            <div className='' id={style.products_boxes} >
+        <div className='get_products mt-4 bg-body-secondary' >
+            <div className='products-section-title mb-5 text-center'>
+                <h2 className='title'>The most important products</h2>
+            </div>
+            <div className='products_boxes' >
                 {products_boxes}
             </div>
         </div>

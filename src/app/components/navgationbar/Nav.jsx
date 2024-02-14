@@ -18,13 +18,10 @@ const DinamicBtn = dynamic(() => import("../loignBtn/loginbtn"), {
 });
 
 const Nav = () => {
-
     const [active, setactive] = useState(false);
     const handelClick = () => {
         setactive(!active);
     };
-
-
 
     return (
         <section className={roboto}>

@@ -1,0 +1,26 @@
+@use "../../layout/mixin/mixins" as *;
+@use "../../layout/variables" as *;
+
+.pgae_not_found {
+    height: calc(100vh - 50px);
+    background-color: $threeE-color;
+    .header_page{
+        font-size: 80px;
+        color: $red-color;
+        text-transform: $text-uppercase;
+        margin-bottom: 50px !important;
+        font-weight: bolder;
+    }
+    .description_page{
+        font-size: 40px;
+        font-weight: 400;
+        position: relative;
+        text-transform: $text-capitalize;
+        &::after {
+           @include qutations(right);
+        }
+        &::before{
+           @include qutations(left);
+        }
+    }
+}

@@ -1,0 +1,59 @@
+.feed_back_section {
+    .data_mail{
+        .input{
+            width: 420px;
+            height: 34px;
+            border-radius: 10px;
+            border: 1px solid teal !important;
+            background: rgba(175, 179, 255, 0.00);
+            padding-inline: 10px !important;
+            font-size: 19px;
+            outline: none !important;
+        }
+        .textarea{
+            width: 420px;
+            height: 200px;
+            resize: none;
+            border-radius: 10px;
+            border: 1px solid teal !important;
+            background: rgba(175, 179, 255, 0.00);
+            padding-inline: 10px !important;
+            font-size: 19px;
+            outline: none !important;
+        }
+    }
+}
+
+@media(max-width: 991px) {
+    .feed_back_section {
+        gap: 1.5rem !important;
+        .data_mail {
+            .input, .textarea {
+                width: 350px;
+            }
+        }
+        .art {
+            .img {
+                width: 370px;
+                height: 350px;
+            }
+        }
+    }
+}
+@media(max-width: 767px) {
+    .feed_back_section {
+        .data_mail {
+            .input, .textarea {
+                width: 450px;
+            }
+        }
+        flex-direction: column;
+        .art {
+            order: -1;
+            .img {
+                width: 300px;
+                height: 250px;
+            }
+        }
+    }
+}
