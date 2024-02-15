@@ -30,25 +30,3 @@
     position: absolute;
     #{$position}: -20px;
 }
-
-
-//* media query */
-@mixin devices($point) {
-    @if $point == mobile {
-        @media(max-width: 767px) {
-            @content;
-        }
-    } @else if $point == small {
-        @media(max-width: 768px ) and (min-width: 991px) {
-            @content;
-        }
-    } @else if $point == medium {
-        @media(min-width: 992px ) and (max-width: 1199px) {
-            @content;
-        }
-    } @else if $point == large {
-        @media(max-width: 1200px) {
-            @content;
-        }
-    }
-}

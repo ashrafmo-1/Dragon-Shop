@@ -31,6 +31,7 @@
 
     .links_section {
         gap: 65px;
+        flex-wrap: wrap;
         .title {
             color: #777;
             font-size: 16px;
@@ -107,5 +108,21 @@
         .footer_head {
             flex-direction: column;
         }
+        .search {
+            width: 300px !important;
+        }
+    }
+}
+
+@media(max-width: 470px) {
+    .footer .inputSearch{
+        width: 310px !important;
+        .search {
+            width: 100% !important;
+        }
+    }
+    .submet {
+        width: 50px !important;
+        font-size: 10px !important;
     }
 }
