@@ -1,10 +1,7 @@
 "use client"
 import React, {useState} from 'react';
-import './globals.css';
-import Image from 'next/image';
-import { Container } from 'react-bootstrap';
+import './globals.scss';
 import Link from 'next/link';
-import LoginImage from './Other 03.png';
 
 const page = () => {
     const [email, setEmail] = useState("");
@@ -40,14 +37,9 @@ const page = () => {
 
     return (
         <div className='login-page'>
-            <Container>
-                <div className='w-100 d-flex justify-align-content align-items-center gap-5'>
-                    <div className="style w-50 d-flex justify-content-center align-content-center">
-                        <Image src={LoginImage} width={500} height={520} className='img' alt="style image only" />
-                        <div className='bgColor'></div>
-                    </div>
-                    <form onSubmit={Submit} className='form w-50 d-flex justify-content-center align-items-center flex-column gap-3'>
-                        <h1 className='text-center mb-5 mt-4'>Welcome Back!</h1>
+                <div className='d-flex justify-content-center align-items-center flex-column gap-5'>
+                        <h1 className='text-center mb-5 mt-4' style={{color: 'white'}}>Welcome Back!</h1>
+                    <form onSubmit={Submit} className='form d-flex justify-content-center align-items-center flex-column gap-3'>
                         <label className='d-flex flex-column'>
                             <label className='inputInfo' htmlFor="">email:</label>
                             <input className='imput' type="email" onChange={((element) => setEmail(element.target.value))} />
@@ -56,14 +48,14 @@ const page = () => {
                             <label className='inputInfo' htmlFor="">password:</label>
                             <input className='imput' type="password" onChange={((element) => setPassword(element.target.value))} />
                         </label>
+                        <div className="errors">
+                            {accept && emailError === 422}
+                            {accept && emailError === 401 && <p style={{ fontSize: "10px", color: "red" }}> password inqurect </p>}
+                        </div>
                         <button className='submit'>login</button>
-                        <div>Dont  have and account? <Link href={'/register'}>Register</Link></div>
-                        {accept && emailError === 422}
-                        {accept && emailError === 401 && <p style={{ fontSize: "10px", color: "red" }}> password inqurect </p>}
-                        <div className='BGCOLOR'></div>
+                        <div style={{color: 'white'}}>Dont  have and account? <Link href={'/register'} style={{color: 'wheat'}}>Register</Link></div>
                     </form>
                 </div>
-            </Container>
         </div>
     )
 }

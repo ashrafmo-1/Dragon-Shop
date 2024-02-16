@@ -1,0 +1,70 @@
+.register-page{
+    height: 100vh !important;
+    background-image: radial-gradient( circle 263px at 100.2% 3%,  rgb(0, 63, 111) 31.1%, rgba(205,181,93,1) 36.4%, rgba(244,102,90,1) 50.9%, rgba(199,206,187,1) 60.7%, rgba(249,140,69,1) 72.5%, rgb(0, 57, 98) 72.6% );
+    // user-select: none;
+
+    .title {
+        font-size: 33px;
+        color: #ffffff;
+        margin-top: 20px;
+        text-transform: uppercase;
+    }
+
+    .form {
+        border-radius: 9px;
+        background: rgba(26, 11, 46, 0.062745098);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        height: 100% !important;
+        margin-top: 10px !important;
+        padding: 10px !important;
+        .inputInfo{
+            color: rgb(255, 255, 255);
+            font-size: 16px;
+            font-weight: 400;
+            padding-left: 10px;
+        }
+        .imput{
+            width: 450px;
+            height: 34px;
+            border-radius: 5px;
+            border: 1px solid rgb(203, 203, 203) !important;
+            background: rgba(175, 179, 255, 0.00);
+            padding-inline: 10px !important;
+            font-size: 19px;
+            color: #ffffff !important;
+        }
+        @media(max-width:490px) {
+            .imput {
+                width: 300px !important;
+            }
+        }
+        .submit{
+            width: 365px;
+            height: 34px;
+            border-radius: 8px;
+            background: transparent;
+            border: 1px solid rgb(255, 255, 255) !important;
+            padding: 8px 0 !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(255, 255, 255);
+            border: none;
+            font-size: 18px;
+        }
+        @media(max-width:490px) {
+            .submit {
+                width: 300px !important;
+            }
+        }
+        .errors{
+            width: 100%;
+            .error{
+                text-align: left;
+                color: orange !important;
+            }
+
+        }
+    }
+}

@@ -1,11 +1,7 @@
 "use client"
-import React from 'react'
-import './globals.css'
-import Image from 'next/image'
-import styleLeft from './register.png'
-import { Container } from 'react-bootstrap'
-import Link from 'next/link'
-import { useState } from 'react'
+import React, { useState } from 'react';
+import './globals.scss';
+import Link from 'next/link';
 
 const Register = () => {
     const [name, setName] = useState("");
@@ -47,42 +43,37 @@ const Register = () => {
 
     return (
         <div className='register-page'>
-            <Container>
-                <div className='w-100 d-flex justify-align-content align-items-center gap-5'>
-                    <form className='form w-50 d-flex justify-content-center align-items-center flex-column gap-3' onSubmit={Submit}>
-                        <h1 className='text-center mb-5 mt-4'>Please Fill out form to Register!</h1>
-                        <label className='d-flex flex-column'>
+                <div className='d-flex justify-content-center align-items-center flex-column'>
+                        <h1 className='title text-center mb-5 mt-4'>Please Fill out form to Register!</h1>
+                    <form className='form d-flex justify-content-center align-items-center flex-column' onSubmit={Submit}>
+                        <label className='d-flex flex-column mb-4'>
                             <span className='inputInfo'>username:</span>
                             <input className='imput' type="text" name="" id="" onChange={(ele) => {setName(ele.target.value)}} />
-                            {name === "" && accept && <p className='error'>user name is required.!</p>}
                         </label>
-                        <label className='d-flex flex-column'>
+                        <label className='d-flex flex-column  mb-4'>
                             <span className='inputInfo' >email:</span>
                             <input className='imput' type="email" name="" id="" required onChange={(ele) => {setEmail(ele.target.value)}} />
-                            {accept === true || emailError === 422 ? (<p className='error'> email is Already been taken.!</p>) : null}
-                            {email === "" ? (<p className='error'>must type your email</p>) : null}
                         </label>
-                        <label className='d-flex flex-column'>
+                        <label className='d-flex flex-column  mb-4'>
                             <span className='inputInfo' >password</span>
                             <input className='imput' type="password" name="" id="" onChange={(ele) => {setPassword(ele.target.value)}} />
-                            {password.length < 4 && accept && <p className='error'>Password must be more than 12 char</p>}
                         </label>
-                        <label className='d-flex flex-column'>
+                        <label className='d-flex flex-column  mb-1'>
                             <span className='inputInfo' >confirm password:</span>
                             <input className='imput' type="password" name="" id="" onChange={(ele) => {setConfirmpass(ele.target.value)}} />
-                            {confirmpass !== password && accept && <p className='error'>Password does not match</p>}
                         </label>
+                        <div className='errors mb-4'>
+                            {name === "" || accept ? <p className='error'>user name is required.!</p> : null}
+                            {accept && emailError === 422 && (<p className='error'> email is Already been taken.!</p>)}
+                            {email === "" ? (<p className='error'>must type your email</p>) : null}
+                            {password.length < 4 || accept ? <p className='error'>Password must be more than 12 char</p> : null}
+                            {confirmpass !== password && accept && <p className='error'>Password does not match</p>}
+                        </div>
                         <button className='submit'>Register</button>
-                        <div>yes i have an account? <Link href={'/login'}>login</Link></div>
-                        <div>dashboard control <Link href={'/dashboard'}>dashboard</Link></div>
+                        <div style={{color: 'white', marginTop: '10px'}}>yes i have an account? <Link href={'/login'} style={{color: 'wheat'}}>login</Link></div>
+                        <div style={{color: 'white'}}>Are You Admin <Link href={'/dashboard'} style={{color: 'wheat'}}>dashboard</Link></div>
                     </form>
-                    <div className="style w-50 d-flex justify-content-center align-content-center">
-                        <Image src={styleLeft} width={500} height={520} className='img' alt="style image only" />
-                        <div className='bgColor'></div>
-                        <div className='bgColor2'></div>
-                    </div>
                 </div>
-            </Container>
         </div>
     )
 }
