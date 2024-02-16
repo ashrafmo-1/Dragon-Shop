@@ -1,11 +1,13 @@
 .nav-slide{
-    margin: auto;
+    overflow: hidden;
+    padding-top: 50px !important;
+    background: white;
+    white-space: nowrap;
     position: relative;
-    overflow-x: scroll;
     .nav-links {
-        display: flex;
+        display: inline-block;
+        animation: 5s slide infinite linear;
         .link {
-            position: relative;
             cursor: pointer;
         }
         .link::after {
@@ -23,6 +25,7 @@
     .link:hover.link::after {
         width: 50%;
     }
+
 }
 .lading-home {
     height: 50vh;
@@ -61,4 +64,13 @@
 }
 .category-box:hover {
     box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
+}
+
+@keyframes slide {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100px);
+    }
 }
