@@ -1,5 +1,5 @@
 import React from 'react';
-import "./globals.css";
+import "./globals.scss";
 import Image from 'next/image';
 import lap from './assets/categories/laptop.jpg';
 import camira from './assets/categories/camira.jpg';
@@ -9,12 +9,12 @@ import smarwatch from './assets/categories/xiaomi_redmi_watch.png';
 import MainTitle from '../components/mainTitle/MainTitle';
 import Feed_back from '../feedback/page';
 import Footer from '../components/footer/Footer';
-import Boxes_products from "../fetchproduct/boxes_products"
+import Boxes_products from "../fetchproduct/boxes_products";
 
 const HomePage = () => {
     return (
-    <div className='home'>
-        
+    <div className='home' >
+
         <div className="nav-slide">
             <div className="nav-links d-flex align-items-center justify-content-center gap-5  text-black py-2 fs-5">
                 <div className="link">Furniture</div>
@@ -46,7 +46,7 @@ const HomePage = () => {
                     <button className='links-btns btn fw-bold fs-3 py-2 px-4'>fashon man</button>
                 </div>
         </div>
-        
+
         <section className='categories'>
             <MainTitle title='categories' />
         <div className="categories-boxes mb-5 mt-5 d-flex justify-content-center align-items-center flex-wrap gap-5 ">
@@ -85,6 +85,7 @@ const HomePage = () => {
         <section className='Feed_back'>
             <Feed_back />
         </section>
+
         <section className='Footer'>
             <Footer />
         </section>
