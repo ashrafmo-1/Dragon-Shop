@@ -35,6 +35,7 @@ const HomePage = () => {
                 <div className="link text-success">Gifts</div>
             </div>
         </div>
+
         <div className="lading-home d-flex justify-content-center align-items-center flex-column py-3">
                 <div className="text-title text-center">
                     <h1 className='title text-white'>dragon store' full ecommerce</h1>

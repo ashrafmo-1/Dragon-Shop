@@ -28,7 +28,7 @@ input {
     background:teal;
 }
 /* start feed_back section */
-.feed_back {
+.feedbackLink {
     background-color: teal;
     width: fit-content;
     margin: auto;
