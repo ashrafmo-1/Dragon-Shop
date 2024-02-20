@@ -14,34 +14,81 @@
     .products_boxes {
         @include width-center(80%);
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
         gap: 40px;
 
         .product_box{
-            background-color: $white-text;
             box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.75);
-            height: 250px;
+            height: 400px;
             border-radius: 4px;
             padding: 6px !important;
             transition: .5s;
+            position: relative;
+            overflow: hidden;
+            background-color: $main-color;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: -50%;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgb(255, 255, 255);
+                transform: skewY(345deg);
+                transition: 0.5s;
+                z-index: 0;
+            }
+            &:hover::before {
+                top: -70%;
+                transform: skewY(390deg);
+            }
             &:hover {
                 box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.50);
             }
+            & .product-category{
+                position: relative;
+                z-index: 999;
+                color: $black-text;
+                text-align: center;
+            }
+            & .product_image {
+                width: 200px;
+                height: 110px;
+                position: relative;
+                left: 50%;
+                transform: translate(-50%);
+                z-index: 999;
+            }
+            & .content_box {
+                margin-top: 7rem !important;
 
-            > .image-control-product{
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                 .img-control {
-                    cursor: pointer;
+                & .product-title {
+                    font-weight: 600;
+                    font-size: 1.8rem;
+                    color: $white-text;
+                }
+                & .rate {
+                    color: $white-text;
+                    margin-top: 10px !important;
+                    font-size: 16px;
                 }
             }
 
-            .product-title {
-                color: $main-color;
-            }
-            .product-description{
-                color: #777777;
+            & .product_controls {
+                margin-top: 2rem !important;
+                position:absolute;
+                bottom: 20px;
+                left: 15px;
+
+                & .add_to_cart, & .show_all_information {
+                    background-color: $white-text;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 4px;
+                    padding: 2px !important;
+                }
             }
         }
     }
