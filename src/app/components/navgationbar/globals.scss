@@ -1,90 +1,60 @@
 @use "../../layout/variables" as *;
 @use "../../layout/mixin/mixins" as *;
 
-.navgation-bar {
-    position: relative;
-    height: 40px !important;
+.navgation_bar {
+    background-color: $white-text;
     position: fixed;
     width: 100%;
-    z-index: 99999;
-    .brand-name{
-        color: $main-color;
-        text-transform: $text-uppercase;
+    z-index: 999;
+
+    > #container {
+        width: 80%;
+        margin: auto !important;
     }
-    .nav-link{
-        text-transform: $text-capitalize;
-    }
-    .login{
-        color: $white-text;
-        text-transform: $text-capitalize;
-        @include flex-center;
-        text-decoration: none;
-        border: $border-main-color;
-        background-color: $main-color;
-        border-radius: 2px;
-        font-size: 16px;
-        padding: 2px 4px;
-        position: relative;
-        cursor: pointer;
-    }
-    .allCategoris {
-        position: relative;
-    }
-    #category {
-        display: none;
-        position: absolute;
-        top: 30px;
-        left: 0%;
-        background-color: $white-text;
-        padding: 4px 8px;
-        width: 400px;
-        font-size: 20px;
-        padding-top: 20px;
-        border-radius: 4px;
-        .categoryLink{
-            text-decoration: none;
-            color: $black-text;
-            background-color: #00000030;
-            border-radius: 8px;
-            padding: 0px 4px !important;
+
+    & .nav_header {
+        & .brand_title {
+            color: $main-color;
+            text-transform: $text-uppercase;
+            font-weight: bold;
+        }
+        & button {
+            border: 1px solid $black-text;
+            background-color: $main-color;
+            @include flex-center;
+            
+            .login{
+                color: $white-text;
+                text-transform: $text-capitalize;
+                @include flex-center;
+                text-decoration: none;
+                background-color: $main-color;
+                border-radius: 2px;
+                font-size: 12px;
+                padding: 2px 4px;
+                position: relative;
+                cursor: pointer !important;
+            }
         }
     }
-    .allCategoris#active #category {
-        @include direction-column;
-        gap: 8px;
-        z-index: 99;
-        padding: 10px !important;
-    }
-}
-
-/// start media query to navigate bar
-/// 
-/// 
-
-@media(min-width: 849px) {
-    .btn-toggle-nav{
-        display: none;
-    }
-}
-
-@media(max-width: 850px) {
-    .navgation-bar {
-        z-index: 99;
-    }
-    .navgation-bar .links {
-        @include direction-column;
-        position: absolute;
-        background-color: $main-color;
-        z-index: 99;
-        width: 80%;
-        height: 350px;
-        top: -360px;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: -9;
-        transition: .7s;
-    }
-    .navgation-bar .links#active {
-        top: 40px;
+    & .links_and_controls{
+        > .links {
+            > li {
+                > .nav-link {
+                    color: $black-text !important;
+                    text-transform: $text-capitalize;
+                }
+            }
+        }
+        & .controls {
+            > .add_to_cart {
+                cursor: pointer;
+            }
+            .cart_icon_title, .wishlist {
+                font-size: 22px;
+                color: $main-color;
+                font-weight: bold;
+            }
+        }
     }
 }

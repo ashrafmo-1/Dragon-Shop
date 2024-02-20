@@ -1,7 +1,6 @@
 .home {
     .nav-slide {
         overflow: hidden;
-        padding-top: 50px !important;
         background: white;
         white-space: nowrap;
         position: relative;
@@ -10,6 +9,7 @@
         .nav-links {
             display: inline-block;
             animation: 5s slide infinite linear;
+            margin-top: 104px !important;
             .link {
                 cursor: pointer;
                 &::after {

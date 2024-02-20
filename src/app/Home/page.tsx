@@ -13,8 +13,7 @@ import Boxes_products from "../fetchproduct/boxes_products";
 
 const HomePage = () => {
     return (
-    <div className='home' >
-
+    <div className='home'>
         <div className="nav-slide">
             <div className="nav-links d-flex align-items-center justify-content-center gap-5  text-black py-2 fs-5">
                 <div className="link">Furniture</div>
