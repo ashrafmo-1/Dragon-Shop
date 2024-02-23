@@ -5,7 +5,8 @@
     background-color: $white-text;
     position: fixed;
     width: 100%;
-    z-index: 999;
+    z-index: 9999;
+    border-bottom: 1px solid $main-color;
 
     > #container {
         width: 80%;

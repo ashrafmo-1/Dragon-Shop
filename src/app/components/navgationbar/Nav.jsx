@@ -29,7 +29,7 @@ const Nav = () => {
         <section className="navgation_bar py-3">
             <div id="container">
             <div className="nav_header d-flex justify-content-between align-items-center">
-                <h1 className="brand_title">dragon store</h1>
+                <Link href={"/"} className="brand_title text-decoration-none"><h1>dragon store</h1></Link>
                 <button className="btn"><DinamicBtn /></button>
             </div>
 
@@ -42,12 +42,12 @@ const Nav = () => {
                         <li> <Link href="/catigory" className='nav-link text-white fs-5 fw-medium'>categories</Link> </li>
                     </div>
                     <div className="controls d-flex align-items-center gap-5">
-                        <div className="add_to_cart d-flex justify-content-center align-items-center">
+                        <Link href={"cart"} className="add_to_cart d-flex justify-content-center align-items-center text-decoration-none">
                             <Image src={cart} width={36} height={36} alt='add to cart' /> <span className="cart_icon_title">cart</span>
-                        </div>
-                        <div className="wishlist d-flex justify-content-center align-items-center gap-1">
+                        </Link>
+                        <Link href={'wishlist'} className="wishlist d-flex justify-content-center align-items-center gap-1 text-decoration-none">
                             <Image src={wishlist} width={32} height={32} alt='add to cart' /> <span className="cart_icon_title"> wishlist</span>
-                        </div>
+                        </Link>
                     </div>
                 </div>
             </div>
