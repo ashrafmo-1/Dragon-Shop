@@ -38,7 +38,7 @@
             }
         }
     }
-    & .links_and_controls{
+    & .links_and_controls {
         > .links {
             > li {
                 > .nav-link {
@@ -57,5 +57,29 @@
                 font-weight: bold;
             }
         }
+    }
+    @media(max-width: 767px) {
+        #container {
+            width: 90% !important;
+            margin: auto !important;
+
+            .links_and_controls {
+                display: none !important;
+            }
+        }
+    }
+
+    .toggleBtn {
+        display: block;
+        background-color: $main-color;
+        padding: 4px !important;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+}
+
+@media(min-width: 767px) {
+    .toggleBtn{
+        display: none !important;
     }
 }

@@ -31,6 +31,7 @@ const Nav = () => {
             <div className="nav_header d-flex justify-content-between align-items-center">
                 <Link href={"/"} className="brand_title text-decoration-none"><h1>dragon store</h1></Link>
                 <button className="btn"><DinamicBtn /></button>
+                <div className="toggleBtn"><Image src={toggle} width={30} height={20} alt="toggle" /></div>
             </div>
 
                 <div className="links_and_controls my-2 d-flex justify-content-between align-items-center">
