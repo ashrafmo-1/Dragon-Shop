@@ -10,7 +10,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - categories toggle.
 - contact me page.
 - scroll to top btn.
-- feedback btn and section in home.
+- feedback btn and section in home,
+- use emailJS.
 - working for all screens.
 # Dashboard:
 - home Dashboard !..
