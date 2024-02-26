@@ -1,6 +1,6 @@
 .feed_back_section {
     .data_mail{
-        .input{
+        & .input{
             width: 420px;
             height: 34px;
             border-radius: 10px;
@@ -10,7 +10,7 @@
             font-size: 19px;
             outline: none !important;
         }
-        .textarea{
+        & .textarea{
             width: 420px;
             height: 200px;
             resize: none;
@@ -20,6 +20,19 @@
             padding-inline: 10px !important;
             font-size: 19px;
             outline: none !important;
+        }
+        & .sent_email_FeedBack {
+            margin-top: 10px !important;
+            border: 1px solid teal;
+            background-color: #ffffff;
+            width: 300px;
+            height: 30px;
+            font-size: 22px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 4px;
         }
     }
 }
