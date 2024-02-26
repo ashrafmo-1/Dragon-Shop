@@ -23,6 +23,7 @@ const Nav = () => {
     const [active, setactive] = useState(false);
     const handelClick = () => {
         setactive(!active);
+        console.log(active);
     };
 
     return (
@@ -31,10 +32,10 @@ const Nav = () => {
             <div className="nav_header d-flex justify-content-between align-items-center">
                 <Link href={"/"} className="brand_title text-decoration-none"><h1>dragon store</h1></Link>
                 <button className="btn"><DinamicBtn /></button>
-                <div className="toggleBtn"><Image src={toggle} width={30} height={20} alt="toggle" /></div>
+                <div className="toggleBtn" onClick={handelClick}><Image src={toggle} width={30} height={20} alt="toggle" /></div>
             </div>
 
-                <div className="links_and_controls my-2 d-flex justify-content-between align-items-center">
+                <div className="links_and_controls my-2 d-flex justify-content-between align-items-center" id={active ? 'active' : ''} >
                     <div className="links d-flex gap-4">
                         <li> <Link href="/" className='nav-link text-white fs-5 fw-medium'>home</Link> </li>
                         <li> <Link href="/aboutus" className='nav-link text-white fs-5 fw-medium'>about us</Link> </li>
