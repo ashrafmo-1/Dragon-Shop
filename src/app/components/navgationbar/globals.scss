@@ -2,112 +2,135 @@
 @use "../../layout/mixin/mixins" as *;
 
 .navgation_bar {
-    background-color: $white-text;
-    position: fixed;
-    width: 100%;
-    z-index: 9999;
-    border-bottom: 1px solid $main-color;
+  background-color: $white-text;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  border-bottom: 1px solid $main-color;
 
-    > #container {
-        width: 80%;
-        margin: auto !important;
+  >#container {
+    width: 80%;
+    margin: auto !important;
+  }
+
+  & .nav_header {
+    & .brand_title {
+      color: $main-color;
+      text-transform: $text-uppercase;
+      font-weight: bold;
     }
 
-    & .nav_header {
-        & .brand_title {
-            color: $main-color;
-            text-transform: $text-uppercase;
-            font-weight: bold;
-        }
-        & button {
-            border: 1px solid $black-text;
-            background-color: $main-color;
-            @include flex-center;
-            
-            .login{
-                color: $white-text;
-                text-transform: $text-capitalize;
-                @include flex-center;
-                text-decoration: none;
-                background-color: $main-color;
-                border-radius: 2px;
-                font-size: 12px;
-                padding: 2px 4px;
-                position: relative;
-                cursor: pointer !important;
-            }
-        }
+    & button {
+      border: 1px solid $black-text;
+      background-color: $main-color;
+      @include flex-center;
 
-        & .toggleBtn {
-            display: block;
-            background-color: $main-color;
-            padding: 4px !important;
-            border-radius: 4px;
-            cursor: pointer;
-        }
+      .login {
+        color: $white-text;
+        text-transform: $text-capitalize;
+        @include flex-center;
+        text-decoration: none;
+        background-color: $main-color;
+        border-radius: 2px;
+        font-size: 12px;
+        padding: 2px 4px;
+        position: relative;
+        cursor: pointer !important;
+      }
     }
-    & .links_and_controls {
-        > .links {
-            > li {
-                > .nav-link {
-                    color: $black-text !important;
-                    text-transform: $text-capitalize;
-                }
-            }
-        }
-        & .controls {
-            > .add_to_cart {
-                cursor: pointer;
-            }
-            .cart_icon_title, .wishlist {
-                font-size: 22px;
-                color: $main-color;
-                font-weight: bold;
-            }
-        }
+
+    & .toggleBtn {
+      display: block;
+      background-color: $main-color;
+      padding: 4px !important;
+      border-radius: 4px;
+      cursor: pointer;
     }
-    @media(max-width: 768px) {
-        #container {
-            width: 90% !important;
-            margin: auto !important;
+  }
 
-            .links_and_controls {
-                position: absolute;
-                width: 100%;
-                // margin: auto !important;
-                flex-direction: column;
-                border: 1px solid $main-color;
-                border-radius: 0px 0px 8px 8px;
-                background-color: #eeeeee;
-                height: 300px;
-                top: -340px;
-                left: 0;
-                transition: .6s ease-in-out;
-
-                > .links, .controls {
-                    flex-direction: column;
-                    position: absolute;
-                }
-                > .links {
-                    left: 20px;
-                    top: 10px;
-                }
-                .controls {
-                    right: 10px;
-                    gap: 10px !important;
-                    top: 10px;
-                }
-            }
-
-            .links_and_controls#active {
-                top: 48px;
-            }
+  & .links_and_controls {
+    >.links {
+      >li {
+        >.nav-link {
+          color: $black-text !important;
+          text-transform: $text-capitalize;
         }
+      }
     }
+
+    & .controls {
+      >.add_to_cart {
+        cursor: pointer;
+        position: relative;
+
+        .cart_length {
+          position: absolute;
+          background-color: $main-color;
+          color: white;
+          top: -3px;
+          left: 20px;
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          @include flex-center;
+        }
+      }
+
+      .cart_icon_title,
+      .wishlist {
+        font-size: 22px;
+        color: $main-color;
+        font-weight: bold;
+      }
+    }
+  }
+
+  @media(max-width: 768px) {
+    #container {
+      width: 90% !important;
+      margin: auto !important;
+
+      .links_and_controls {
+        position: absolute;
+        width: 100%;
+        // margin: auto !important;
+        flex-direction: column;
+        border: 1px solid $main-color;
+        border-radius: 0px 0px 8px 8px;
+        background-color: #eeeeee;
+        height: 300px;
+        top: -340px;
+        left: 0;
+        transition: .6s ease-in-out;
+
+        >.links,
+        .controls {
+          flex-direction: column;
+          position: absolute;
+        }
+
+        >.links {
+          left: 20px;
+          top: 10px;
+        }
+
+        .controls {
+          right: 10px;
+          gap: 10px !important;
+          top: 10px;
+
+        }
+      }
+
+      .links_and_controls#active {
+        top: 48px;
+      }
+    }
+  }
 }
 
 @media(min-width: 769px) {
-    .toggleBtn{
-        display: none !important;
-    }
+  .toggleBtn {
+    display: none !important;
+  }
 }

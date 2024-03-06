@@ -1,8 +1,6 @@
 import React from 'react';
 import "./globals.scss"
-import Image from "next/image"
-import cart from "./assets/cart.png"
-import showProduct from "./assets/eye.png"
+import Link from 'next/link';
 
 const Boxes_products = async () => {
 
@@ -10,19 +8,15 @@ const Boxes_products = async () => {
   const response = await fetch(api);
   const products = await response.json();
 
-  const products_boxes = products.map((product) => {
+  const products_boxes = products.slice(0, 5).map((product) => {
     return (
       <div className='product_box'>
         <p className='product-category mb-4'> {product.category} </p>
           <img className='product_image' src={product.image} width={75} height={75} />
         <div className='content_box'>
           <div className='info'>
-            <h3 className='product-title mt-4'> {product.title.length > 12 ? `${product.title.slice(0, 22)}..` : product.title}  </h3>
+            <h3 className='product-title mt-4'> {product.title.length > 12 ? `${product.title.slice(0, 22)}..` : product.title}</h3>
             <p className='rate'> Rate: {product.rating.rate} </p>
-          </div>
-          <div className='product_controls  d-flex gap-1'>
-            <Image className='add_to_cart' src={cart} width={36} height={36} alt='add to cart' />
-            <Image className='show_all_information' src={showProduct} width={36} height={36} alt='add to cart' />
           </div>
         </div>
       </div>
@@ -34,8 +28,12 @@ const Boxes_products = async () => {
             <div className='products-section-title mb-5 text-center'>
                 <h2 className='title'>The most important products</h2>
             </div>
-            <div className='products_boxes' >
+            <div className='products_boxes'>
                 {products_boxes}
+            </div>
+            <div className='go_allProducts d-flex align-items-center gap-5'>
+              <h4>show all products</h4>
+              <Link href={`products`} className='btn_show_more btn d-flex justify-content-center align-items-center'>more..</Link>
             </div>
         </div>
     )

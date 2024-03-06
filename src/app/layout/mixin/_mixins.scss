@@ -11,12 +11,15 @@
     align-items: center !important;
 }
 
-
 /// directions
 /// direction column
 @mixin direction-column {
     display: flex !important;
     flex-direction: column !important;
+}
+@mixin direction-row {
+    display: flex !important;
+    flex-direction: row !important;
 }
 
 //* width centering */

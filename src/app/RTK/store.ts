@@ -1,7 +1,12 @@
+"use client"
 import { configureStore } from '@reduxjs/toolkit';
+import { Product_control } from "./slices/cart_slice"
 
-const RTK_Store = () => {
-    return configureStore({
-        reducer: {},
-    })
-}
+export const RTK_Store = configureStore({
+    reducer: {
+        cart: Product_control.reducer,
+    },
+})
+
+export type RootState = ReturnType<typeof RTK_Store.getState>;
+export type AppDispatch = typeof RTK_Store.dispatch;
