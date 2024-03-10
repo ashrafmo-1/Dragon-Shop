@@ -7,15 +7,7 @@ export const Product_control = createSlice({
 
   reducers: {
     add: (state, action) => {
-      const fint_product = state.find((product) => {
-        product.id === action.payload.id;
-      });
-      if (fint_product) {
-        fint_product.quantity += 1;
-      } else {
-        const cloneProduct = {...action.payload, quantity: 1 };
-        state.push(cloneProduct);
-      }
+      state.push(action.payload);
     },
   },
 });
