@@ -1,0 +1,70 @@
+@use "../../layout/variables" as *;
+@use "../../layout/mixin/mixins" as *;
+
+.navgation_bar {
+  background-color: $white-text;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  border-bottom: 1px solid $main-color;
+  > #container {
+    @include width-center(80%);
+  }
+  & .nav_header {
+    & .brand_title {
+      color: $main-color;
+      text-transform: $text-uppercase;
+      font-weight: bold;
+    }
+    & .toggleBtn {
+      display: block;
+      background-color: $main-color;
+      padding: 4px !important;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  }
+  & .links_and_controls {
+    >.links {
+      >li {
+        >.nav-link {
+          color: $black-text !important;
+          text-transform: $text-capitalize;
+        }
+      }
+    }
+  }
+  @media(max-width: 768px) {
+    #container {
+      width: 90% !important;
+      margin: auto !important;
+      .links_and_controls {
+        position: absolute;
+        width: 100%;
+        // margin: auto !important;
+        flex-direction: column;
+        border: 1px solid $main-color;
+        border-radius: 0px 0px 8px 8px;
+        background-color: #eeeeee;
+        height: 300px;
+        top: -340px;
+        left: 0;
+        transition: .6s ease-in-out;
+        >.links {
+          flex-direction: column;
+          position: absolute;
+          left: 20px;
+          top: 10px;
+        }
+      }
+      .links_and_controls#active {
+        top: 48px;
+      }
+    }
+  }
+}
+@media(min-width: 769px) {
+  .toggleBtn {
+    display: none !important;
+  }
+}
