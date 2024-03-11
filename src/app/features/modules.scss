@@ -1,0 +1,45 @@
+@use "../layout/mixin/mixins" as *;
+@use "../layout/variables" as *;
+
+.features {
+  padding: 120px 0 30px 0 !important;
+  @include width-center(90%);
+  height: 200vh;
+
+  .left_list {
+    background: #eee;
+    width: 25%;
+    height: 85vh;
+
+    .links_header {
+
+      .title {}
+
+      .witeby {}
+    }
+  }
+
+  & .information {
+    width: 70%;
+
+    .title {
+      font-size: 50px;
+      margin-bottom: 60px !important;
+    }
+
+    .description {
+      margin-top: 30px !important;
+      font-size: 22px;
+      line-height: 1.1;
+      letter-spacing: 1;
+    }
+  }
+
+  .skillsOfDr {
+    width: 100%;
+    & li, ul{
+      list-style: disc !important;
+      padding-left: .4rem !important;
+    }
+  }
+}
