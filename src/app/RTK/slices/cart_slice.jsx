@@ -14,23 +14,8 @@ export const Product_control = createSlice({
       if(findProduct) {
         findProduct.quantity += 1;
       } else {
-        const cloneProduct = {...action.payload, quantity: 1}
+        const cloneProduct = {...action.payload, quantity: 1 };
         state.push(cloneProduct);
-      }
-    },
-    increment: (state, action) => {
-      const findProduct = state.find((product) => {
-        product.id === action.payload.id;
-      });
-      findProduct.quantity += 1;
-    },
-    decrement: (state, action) => {
-      const findProduct = state.find((product) => {
-        product.id === action.payload.id;
-      })
-      findProduct.quantity -= 1;
-      if(findProduct.quantity === 0) {
-        findProduct.quantity = 1;
       }
     },
     remove: (state, action) => {
@@ -38,6 +23,19 @@ export const Product_control = createSlice({
     },
     remove_all: () => {
       return [];
+    },
+    increment: (state, action) => {
+      const findProduct = state.find((product) => {
+        return product.id === action.payload.id;
+      });
+      findProduct ? findProduct.quantity += 1 : null;
+    },
+    decrement: (state, action) => {
+      const findProduct = state.find((product) => {
+        return product.id === action.payload.id;
+      })
+      findProduct ? findProduct.quantity -= 1 : null;
+      findProduct.quantity === 0 ? findProduct.quantity = 1 : null;
     },
   },
 });

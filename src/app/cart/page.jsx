@@ -12,7 +12,7 @@ const ProductCart = () => {
 
   const totalPrice = products.reduce((acc, products) => {
     acc += products.price;
-    return acc * products.quantity // error not a number on run
+    return acc * products.quantity; // error not a number on run
   }, 0);
 
   /* product cart from reduxToolKit */
@@ -24,10 +24,11 @@ const ProductCart = () => {
         <h2 className="product_title"> {product.title.slice(0, 12)} </h2>
       </div>
       <div className="product_control d-flex gap-2 align-items-center">
-        <span className="decrement" onClick={() => dispatch(decrement(product))}>-</span>
-        <span className="product_count d-flex align-items-center justify-content-center">{product.quantity }</span>
-        <span className="increment" onClick={() => dispatch(increment(product))}>+</span>
+        <span className="decrement" onClick={() => dispatch(decrement(product))}> - </span>
+        <span className="product_count d-flex align-items-center justify-content-center">{product.quantity}</span>
+        <span className="increment" onClick={() => dispatch(increment(product))}> + </span>
       </div>
+      <span className="product_price"> ${ product.price * product.quantity } </span>
       <button className="reamove_product btn" onClick={() => dispatch(remove(product))}>Delete</button>
     </div>
   ))
@@ -45,7 +46,7 @@ const ProductCart = () => {
                 <button className="removeAll" onClick={() => dispatch(remove_all())}>delete all</button>
               </>
             ) : (
-              <p className="cart_impty">" not have any products "</p>
+                <p className="cart_impty">" not have any products "</p>
               )}
           </div>
         </div>
@@ -56,6 +57,5 @@ const ProductCart = () => {
     </div>
   );
 };
-{/* <button></button> */}
-// 
+
 export default ProductCart;
