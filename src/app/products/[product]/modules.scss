@@ -1,33 +1,37 @@
 @use "../../layout/variables" as *;
 @use "../../layout/mixin/mixins" as *;
+
 .show_product {
   background-color: $threeE-color;
   height: 100vh;
 
-  > .single_product {
+  >.single_product {
     @include width-center(40%);
     position: relative;
     top: 130px !important;
     padding: 10px 20px !important;
-    height: 70vh !important;
-    width: 700px !important;
+    height: 50vh;
+    width: 700px;
     background-color: $white-text;
     border-radius: 5px;
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
 
     & .info {
-      > .category {
+      >.category {
         color: #777;
       }
+
       & .produc_Title {
-        font-size: 35px !important;
+        font-size: 35px;
         color: $main-color;
       }
     }
+
     & .produc_Description {
       color: #777;
       margin-bottom: 30px !important;
     }
+
     & .rate {
       border: 1px solid $main-color;
       background-color: transparent;
@@ -36,13 +40,48 @@
       font-size: 18px;
       border-radius: 4px;
       transition: .3s;
+
       &:hover {
         height: 28px !important;
         width: 98px !important;
         border: 1px solid transparent;
-        background-color:  $main-color;
+        background-color: $main-color;
         font-size: 16px;
         color: $white-text;
+      }
+    }
+  }
+}
+
+// media querys
+@media(max-width: 767px) {
+  .single_product {
+    width: 500px !important;
+    height: 60vh !important;
+
+    >.header {
+      display: block !important;
+      text-align: center;
+
+      & img {
+        width: 200px !important;
+      }
+
+      & .produc_Title {
+        font-size: 22px !important;
+      }
+    }
+  }
+}
+
+@media(max-width: 767px) {
+  .single_product {
+    width: 400px !important;
+    height: 60vh !important;
+
+    >.header {
+      & img {
+        width: 180px !important;
       }
     }
   }

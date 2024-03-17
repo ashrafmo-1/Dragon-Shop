@@ -28,7 +28,7 @@ const Products = () => {
         <div className='content_box'>
           <div className='info'>
             <h3 className='product-title mt-4'> {product.title.length > 12 ? `${product.title.slice(0, 22)}..` : product.title}</h3>
-            <p className='rate'> Rate: {product.rating.rate} </p>
+            <p className='rate'> Price: ${product.price} </p>
           </div>
           <div className='product_controls  d-flex gap-1'>
             <Image className='add_to_cart' src={cart} width={36} height={36} alt='add to cart' onClick={() => Dispatch(add(product))} />
