@@ -2,6 +2,10 @@
   "name": "dragon-ecomerce",
   "version": "0.1.0",
   "private": true,
+  "GOOGLE CAPTCHA": {
+    "server cide": "6LcZ3pspAAAAAGq9PDPzNfCNaCBeE5qCqfikqqtS",
+    "client cide": "6LcZ3pspAAAAANY5yNsULjzRPIzUJq-VROsIuwTV"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",

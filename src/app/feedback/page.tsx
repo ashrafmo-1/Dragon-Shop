@@ -37,7 +37,7 @@ const Feed_back = () => {
                   <span>message:</span>
                   <textarea name="user-project" className='textarea message' placeholder='type message feedback' cols={80} />
               </label>
-
+              {/* GOOGLE CAPTCHA => hande */}
               <button value="Sent" className='sent_email_FeedBack'>sent mail</button>
           </form>
         </div>

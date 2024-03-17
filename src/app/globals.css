@@ -1,42 +1,91 @@
 * {
-    margin: 0 !important;
-    padding: 0 !important;
-    box-sizing: border-box;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box;
 }
 p {
-    margin: 0 !important;
-    padding: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
-h1, h2, h3, h4, h5, h6 {
-    margin: 0 !important;
-    padding: 0 !important;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 !important;
+  padding: 0 !important;
 }
-ul, li {
-    list-style: none !important;
+ul,
+li {
+  list-style: none !important;
 }
 input {
-    border: none !important;
-    outline: none !important;
+  border: none !important;
+  outline: none !important;
 }
 ::-webkit-scrollbar {
-    width: 6px;
+  width: 6px;
 }
 ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px rgb(0, 0, 0);
+  box-shadow: inset 0 0 5px rgb(0, 0, 0);
 }
 ::-webkit-scrollbar-thumb {
-    background:teal;
+  background: teal;
 }
 /* start feed_back section */
 .feedbackLink {
-    background-color: teal;
-    width: fit-content;
-    margin: auto;
-    padding: 6px !important;
-    transform: rotate(-90deg);
-    position: fixed;
-    right: -40px;
-    top: 250px;
-    color: white;
+  background-color: teal;
+  width: fit-content;
+  margin: auto;
+  padding: 6px !important;
+  transform: rotate(-90deg);
+  position: fixed;
+  right: -40px;
+  top: 250px;
+  color: white;
 }
 /* end feed_back section */
+
+/* loading effeck */
+.loadingPgae {
+  height: 100vh;
+  .loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    letter-spacing: 2px;
+  }
+  .loader:before {
+    content: "Loading";
+    color: teal;
+  }
+  .loader:after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: #ff3d00;
+    border-radius: 50%;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    top: -70px;
+    animation: motion 3s ease-in-out infinite;
+  }
+}
+
+@keyframes motion {
+  0%,
+  50%,
+  100% {
+    transform: translateX(0) scale(1);
+  }
+  25% {
+    transform: translateX(-100px) scale(0.3);
+  }
+  75% {
+    transform: translateX(100px) scale(0.3);
+  }
+}
