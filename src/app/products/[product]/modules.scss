@@ -57,31 +57,31 @@
 @media(max-width: 767px) {
   .single_product {
     width: 500px !important;
-    height: 60vh !important;
+    height: 70vh !important;
 
     >.header {
       display: block !important;
       text-align: center;
 
       & img {
-        width: 200px !important;
+        width: 180px !important;
       }
 
       & .produc_Title {
-        font-size: 22px !important;
+        font-size: 20px !important;
       }
     }
   }
 }
 
-@media(max-width: 767px) {
+@media(max-width: 520px) {
   .single_product {
-    width: 400px !important;
-    height: 60vh !important;
+    width: 350px !important;
+    height: 64vh !important;
 
     >.header {
       & img {
-        width: 180px !important;
+        width: 100px !important;
       }
     }
   }
