@@ -43,9 +43,19 @@
         .description {
             color: teal;
         }
-        .links-btns {
-            background-color: teal;
-            color: white;
+        .btns {
+            > .links-btns {
+                background-color: teal;
+                color: white;
+            }
+        }
+        @media(max-width: 350px) {
+            .btns {
+                gap: 10px !important;
+                > .links-btns {
+                    font-size: 16px !important;
+                }
+            }
         }
     }
     .category-box {
@@ -64,6 +74,14 @@
         }
         &:hover {
             box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
+        }
+    }
+}
+
+@media(max-width: 350px) {
+    .nav-links {
+        .link {
+            margin-top: -60px !important;
         }
     }
 }

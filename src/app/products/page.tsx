@@ -28,11 +28,13 @@ const Products = () => {
         <div className='content_box'>
           <div className='info'>
             <h3 className='product-title mt-4'> {product.title.length > 12 ? `${product.title.slice(0, 22)}..` : product.title}</h3>
-            <p className='rate'> Price: ${product.price} </p>
           </div>
-          <div className='product_controls  d-flex gap-1'>
-            <Image className='add_to_cart' src={cart} width={36} height={36} alt='add to cart' onClick={() => Dispatch(add(product))} />
-            <Link href={`products/${product.id}`}><Image className='show_all_information' src={showProduct} width={36} height={36} alt='add to cart' /></Link>
+          <div className='product_controls  d-flex justify-content-between align-items-center'>
+            <div className="controlProduct d-flex justify-content-between align-items-center gap-3">
+              <Image className='add_to_cart' src={cart} width={36} height={36} alt='add to cart' onClick={() => Dispatch(add(product))} />
+              <Link href={`products/${product.id}`}><Image className='show_all_information' src={showProduct} width={36} height={36} alt='add to cart' /></Link>
+            </div>
+            <p className='rate'> Price: ${product.price} </p>
           </div>
         </div>
       </div>
