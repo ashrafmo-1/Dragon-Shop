@@ -1,6 +1,6 @@
 import React from 'react'
 // import ErrorsPage from '../components/errors/ErrorsPage'; start work
-import Nav from '../components/navgationbar/Nav'
+// import Nav from '../components/navgationbar/Nav'
 import Footer from '../components/footer/Footer'
 import "./modules.scss"
 import SecondNav from '../components/secondNav/SecondNav'

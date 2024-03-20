@@ -1,37 +1,61 @@
 @use "../layout/mixin/mixins" as *;
 @use "../layout/variables" as *;
+
 .aboutUs {
   @include width-center(80%);
-  padding-top: 110px !important;
+  padding-top: 50px !important;
+
   .headerInfo {
 
-    > h5 {
+    >h5 {
       font-size: 30px;
       color: $main-color;
     }
+
     & p {
       width: 1000px;
       font-size: 22px;
+      @include width-center(100%);
     }
   }
+
+  @media(max-width: 767px) {
+    .headerInfo {
+      flex-direction: column;
+    }
+  }
+
   .boxes_more_information {
     width: 100%;
+
     .box {
       background-color: $threeE-color;
       width: 50%;
+
       & h2 {
         font-size: 30px;
       }
+
       & p {
         width: 80%;
         color: #777;
       }
+
       & button {
         border: 1px solid #777;
         color: $main-color;
         padding: 3px 10px !important;
         font-size: 22px;
         border-radius: 4px;
+      }
+    }
+  }
+
+  @media(max-width: 767px) {
+    .boxes_more_information {
+      flex-direction: column !important;
+      .box {
+        width: 100%;
       }
     }
   }

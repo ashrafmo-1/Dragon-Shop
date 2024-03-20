@@ -60,3 +60,15 @@
         }
     }
 }
+@media(max-width: 878px) {
+    .product_cart {
+        flex-direction: column;
+        @include width-center(95%);
+        .all_products {
+            @include width-center(100%);
+            .product {
+                flex-direction: column;
+            }
+        }
+    }
+}

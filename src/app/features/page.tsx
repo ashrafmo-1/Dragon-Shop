@@ -1,5 +1,5 @@
 import React from 'react';
-// import ErrorsPage from '../components/errors/ErrorsPage'; // start work
+import ErrorsPage from '../components/errors/ErrorsPage'; // start work
 import SecondNav from '../components/secondNav/SecondNav';
 import Footer from '../components/footer/Footer';
 import "./modules.scss";
@@ -8,7 +8,7 @@ export default function page() {
   return (
     <div>
       <SecondNav />
-      <div className='features'>
+      {/* <div className='features'>
         <div className="informationDr d-flex gap-5">
           <div className="left_list p-2">
             <div className="header">
@@ -66,7 +66,8 @@ export default function page() {
             
           </ul>
         </div>
-      </div>
+      </div> */}
+      <ErrorsPage />
       <Footer />
     </div>
   )

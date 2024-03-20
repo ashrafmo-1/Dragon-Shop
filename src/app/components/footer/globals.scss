@@ -2,8 +2,9 @@
 @use "../../layout/mixin/mixins" as *;
 
 .footer {
-   @include width-center(80%);
-    .text_content{
+    @include width-center(80%);
+
+    .text_content {
         .btns {
             .btn_footer {
                 border: $border-black-color;
@@ -13,12 +14,24 @@
                 font-weight: bold;
                 text-transform: $text-capitalize;
             }
+
             .btn_footer.active {
                 background-color: $black-text;
                 color: $white-text;
             }
         }
+        @media(max-width: 420px) {
+            .btns {
+                flex-direction: column !important;
+            }
+        }
     }
+    @media(max-width: 420px) {
+        .text_content {
+            text-align: center;
+        }
+    }
+
     .logo {
         .footer_title {
             text-transform: $text-uppercase;
@@ -32,16 +45,19 @@
     .links_section {
         gap: 65px;
         flex-wrap: wrap;
+
         .title {
             color: #777;
             font-size: 16px;
             text-transform: $text-capitalize;
             margin-bottom: 10px !important;
         }
+
         .link {
             text-transform: $text-capitalize;
         }
     }
+
     .inputSearch {
         background-color: #999999;
         border-radius: 4px;
@@ -56,9 +72,11 @@
             color: $main-color;
             padding-inline: 4px !important;
         }
+
         .lable {
             position: relative;
         }
+
         .submet {
             position: absolute;
             right: 0;
@@ -71,8 +89,10 @@
             font-weight: bold;
         }
     }
+
     .end_footer {
         margin-top: 50px !important;
+
         .brand_footer {
             text-transform: $text-uppercase;
             color: $main-color;
@@ -86,6 +106,7 @@
         .logo .footer_title {
             font-size: 22px !important;
         }
+
         .text_content h1 {
             font-size: 18px;
         }
@@ -102,12 +123,15 @@
             font-size: 28px !important;
             margin-bottom: 30px !important;
         }
+
         .text_content {
             order: 1;
         }
+
         .footer_head {
             flex-direction: column;
         }
+
         .search {
             width: 300px !important;
         }
@@ -115,12 +139,14 @@
 }
 
 @media(max-width: 470px) {
-    .footer .inputSearch{
+    .footer .inputSearch {
         width: 310px !important;
+
         .search {
             width: 100% !important;
         }
     }
+
     .submet {
         width: 50px !important;
         font-size: 10px !important;

@@ -44,7 +44,6 @@ const Nav = () => {
                         <li> <Link href="/features" className='nav-link text-white fs-5 fw-medium'>features</Link> </li>
                         <li> <Link href="/products" className='nav-link text-white fs-5 fw-medium'>products</Link> </li>
                         <li> <Link href="/contact" className='nav-link text-white fs-5 fw-medium'>contact me</Link> </li>
-                        <li> <Link href="/catigory" className='nav-link text-white fs-5 fw-medium'>categories</Link> </li>
                     </div>
                     <div className="controls d-flex align-items-center gap-5">
                         <Link href={"cart"} className="add_to_cart d-flex justify-content-center align-items-center text-decoration-none">

@@ -34,12 +34,13 @@ const ProductCart = () => {
   ))
 
   return (
-    <div className="bg-body-secondary" style={{ height: "100vh" }}>
+    <div className="bg-body-secondary">
       <Nav />
       <div className="product_cart d-flex gap-5">
         <div className="all_products w-75 mb-4">
           <h2 className="cart_title mb-3">Shopping Cart</h2>
           <div className="all_product mt-5">
+        <p className="catigory_title"> {product.category} </p>
             {products.length > 0 ? (
               <>
                 { product }
