@@ -10,7 +10,7 @@ export default function page() {
     <section>
       <SecondNav />
       <div className="aboutUs">
-        <div className='headerInfo d-flex justify-content-between my-5'>
+        <div className='headerInfo d-flex justify-content-between mb-5'>
           <h5>Who We Are</h5>
           <p>
             Dragon Store is guided by four principles:

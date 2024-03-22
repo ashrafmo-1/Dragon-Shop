@@ -18,13 +18,7 @@ export const Product_control = createSlice({
         state.push(cloneProduct);
       }
     },
-    remove: (state, action) => {
-      return state.filter((product) => product.id !== action.payload.id);
-    },
-    remove_all: () => {
-      return [];
-    },
-    increment: (state, action) => {
+        increment: (state, action) => {
       const findProduct = state.find((product) => {
         return product.id === action.payload.id;
       });
@@ -36,6 +30,12 @@ export const Product_control = createSlice({
       })
       findProduct ? findProduct.quantity -= 1 : null;
       findProduct.quantity === 0 ? findProduct.quantity = 1 : null;
+    },
+    remove: (state, action) => {
+      return state.filter((product) => product.id !== action.payload.id);
+    },
+    remove_all: () => {
+      return [];
     },
   },
 });
