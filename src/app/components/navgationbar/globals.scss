@@ -60,15 +60,15 @@
         cursor: pointer;
         position: relative;
         .cart_length {
-          position: absolute;
-          background-color: $main-color;
-          color: white;
-          top: -3px;
-          left: 20px;
-          width: 15px;
-          height: 15px;
-          border-radius: 50%;
-          @include flex-center;
+          // position: absolute;
+          // background-color: $main-color;
+          // color: white;
+          // top: -3px;
+          // left: 20px;
+          // width: 15px;
+          // height: 15px;
+          // border-radius: 50%;
+          // @include flex-center;
         }
       }
       .cart_icon_title,

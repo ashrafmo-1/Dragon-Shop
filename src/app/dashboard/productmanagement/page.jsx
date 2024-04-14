@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import "./globals.css";
 
 const  ProductsManagement = async () => {
     let api = "https://database-products.onrender.com/products";
@@ -30,7 +31,7 @@ const  ProductsManagement = async () => {
     return (
         <div>
             <h1 className='my-4 text-center' style={{textTransform: 'uppercase', color: 'teal'}}>products management 👨‍💻👩‍💻</h1>
-            <table className="table table-striped table-hover p-2 border">
+            <table className="products_table table table-striped table-hover p-2 border">
                     <thead>
                         <tr className='text-center'>
                         <th scope="col" className='py-2 fs-4' style={{textTransform: 'capitalize'}}>#id</th>

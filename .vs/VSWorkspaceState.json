@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\components",
+    "\\src\\app\\components\\navgationbar",
+    "\\src\\app\\dashboard",
+    "\\src\\app\\dashboard\\productmanagement"
+  ],
+  "SelectedNode": "\\src\\app\\components\\navgationbar\\globals.scss",
+  "PreviewInSolutionExplorer": false
+}

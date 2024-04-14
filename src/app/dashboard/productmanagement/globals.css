@@ -1,0 +1,6 @@
+.products_table {
+    overflow:hidden;
+    overflow-x: scroll;
+    overflow-y: scroll;
+
+}

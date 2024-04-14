@@ -1,74 +1,79 @@
-.dashboard-home{
-    .intro-title{
-        text-transform: uppercase;
-    }
+.dashboard-home {
+  .intro-title {
+    text-transform: uppercase;
+  }
 }
 
-.dashboard-content{
-
-    .toggle_side_bar {
-        
+.dashboard-content {
+  width: 100%;
+  .dashboaed-nav {
+    background-color: teal;
+    .nav-title {
+      text-transform: capitalize;
+      color: #fff;
     }
-    width: 100%;
-    .dashboaed-nav {
-        background-color: teal;
-        .nav-title{
-            text-transform: capitalize;
-            color: #fff;
-        }
-        .status-nav {
-            color: black;
-            background-color: #eeeeee60;
-            border-radius: 8px;
-            padding: 2px 5px 2px 20px !important;
-            position: relative;
-        }
-        .status-nav::before {
-            position: absolute;
-            content: '';
-            background-color: green;
-            border-radius: 50%;
-            width: 10px;
-            height: 10px;
-            left: 6px;
-            top: 50%;
-            transform: translateY(-50%);
-        }
+    .status-nav {
+      color: black;
+      background-color: #eeeeee60;
+      border-radius: 8px;
+      padding: 2px 5px 2px 20px !important;
+      position: relative;
     }
+    .status-nav::before {
+      position: absolute;
+      content: "";
+      background-color: green;
+      border-radius: 50%;
+      width: 10px;
+      height: 10px;
+      left: 6px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
 }
-.sideBar{
-    z-index: 999;
-    background-color: rgba(4, 123, 123, 0.768);
-    box-shadow: 2px 0px 6px 0px rgba(0,0,0,0.75);
-    /* position: absolute;
-    width: 20%;
-    height: 100vh; */
-    /* left: -200px; */
+.sideBar {
+  z-index: 999;
+  background-color: rgba(4, 123, 123, 1);
+  box-shadow: 2px 0px 6px 0px rgba(0, 0, 0, 0.1);
+  width: 0;
+  transition: 0.8s;
 
-    .title {
-        text-transform: capitalize;
-        text-align: center;
-        color: #fff;
-        margin-bottom: 10;
-    }
+  .title {
+    text-transform: capitalize;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 10;
+    display: none;
+    transition: 0.8s;
+  }
 
-    .link{
-        color: teal;
-        text-transform: capitalize;
-        letter-spacing: .1px;
-        position: relative;
-        background-color: #fff;
-        width: 260px;
-        border-radius: 4px;
-    }
-    .link::after{
-        position: absolute;
-        content: '';
-        border-color: transparent transparent transparent teal;
-        border-width: 8px;
-        border-style: solid;
-        top: 50%;
-        transform: translateY(-50%);
-        right: 0;
-    }
+  .link {
+    color: teal;
+    text-transform: capitalize;
+    letter-spacing: 0.1px;
+    position: relative;
+    background-color: #fff;
+    border-radius: 4px;
+    display: none;
+    transition: 0.8s;
+  }
+  .link::after {
+    position: absolute;
+    content: "";
+    border-color: transparent transparent transparent teal;
+    border-width: 8px;
+    border-style: solid;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+  }
+}
+
+.sideBar#active {
+  width: 20%;
+  .title,
+  .link {
+    display: block;
+  }
 }
